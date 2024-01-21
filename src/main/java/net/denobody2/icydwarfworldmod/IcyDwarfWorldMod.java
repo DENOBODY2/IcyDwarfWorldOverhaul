@@ -1,6 +1,9 @@
 package net.denobody2.icydwarfworldmod;
 
 import com.mojang.logging.LogUtils;
+import net.denobody2.icydwarfworldmod.registry.ModBlocks;
+import net.denobody2.icydwarfworldmod.registry.ModCreativeTabs;
+import net.denobody2.icydwarfworldmod.registry.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -29,7 +32,9 @@ public class IcyDwarfWorldMod
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-
+        ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
+        ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

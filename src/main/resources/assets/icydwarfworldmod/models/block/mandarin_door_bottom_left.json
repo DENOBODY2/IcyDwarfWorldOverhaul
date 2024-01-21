@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "icydwarfworldmod:block/mandarin_door_bottom",
+    "top": "icydwarfworldmod:block/mandarin_door_top"
+  }
+}

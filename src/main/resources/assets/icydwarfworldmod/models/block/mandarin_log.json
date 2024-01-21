@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "icydwarfworldmod:block/mandarin_log_top",
+    "side": "icydwarfworldmod:block/mandarin_log_side"
+  }
+}
