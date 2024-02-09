@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:produces_corals_from_bonemeal",
+  "features": "icydwarfworldmod:deepslate_deirum_ore_placed",
+  "step": "underground_ores"
+}

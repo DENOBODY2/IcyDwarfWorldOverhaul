@@ -5,6 +5,7 @@ import net.denobody2.icydwarfworldmod.common.blocks.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.BlockItem;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -248,21 +250,31 @@ public class ModBlocks {
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
 
-    //Todo
-    //deirum ore and that stuff
-    //ore gen
-    //ashen dust pile
-    //ashen ruins structure??
-    //verdant stone veins
-    //mandarin tree
-    //deepslate chiseled bookshelf
-    //gooblino mob - tamable, spawns in jungles, tamed with mandarin flowers from leaves
-
-    //recipes
-    //loot tables
 
 
+    public static final RegistryObject<Block> DEIRUM_ORE = registerFireResBlock("deirum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)
+            .sound(SoundType.ANCIENT_DEBRIS)
+            .strength(25.0F, 900.0F)
+            .requiresCorrectToolForDrops()
+            .sound(SoundType.DEEPSLATE), UniformInt.of(3, 5)));
+    public static final RegistryObject<Block> DEEPSLATE_DEIRUM_ORE = registerFireResBlock("deepslate_deirum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)
+            .sound(SoundType.ANCIENT_DEBRIS)
+            .strength(30.0F, 1200.0F)
+            .requiresCorrectToolForDrops()
+            .sound(SoundType.DEEPSLATE),UniformInt.of(3, 6)));
+    public static final RegistryObject<Block> DEIRUM_BLOCK = registerFireResBlock("deirum_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)
+            .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+    public static final RegistryObject<Block> ASHEN_DUST = registerBlock("ashen_dust", () -> new FallingBlock(BlockBehaviour.Properties.copy(Blocks.SAND)
+            .sound(SoundType.SAND)));
+    public static final RegistryObject<Block> ASHEN_DUST_PILE = registerBlock("ashen_dust_pile", () ->new AshPileBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).replaceable().forceSolidOff().randomTicks().strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.SAND).isViewBlocking((p_187417_, p_187418_, p_187419_) -> {
+        return p_187417_.getValue(AshPileBlock.LAYERS) >= 8;
+    }).pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> DEEPSLATE_CHISELED_BOOKSHELF = registerBlock("deepslate_chiseled_bookshelf", () -> new DeepSlateChiseledBookshelfBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_BOOKSHELF)
+            .requiresCorrectToolForDrops()
+            .noOcclusion()
+            .sound(SoundType.CHISELED_BOOKSHELF)));
     public static final RegistryObject<Block> CRATE = registerBlock("crate",
             () -> new CrateBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)));
 
@@ -276,16 +288,22 @@ public class ModBlocks {
     }
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        if(name.equals("fire_res") || name.equals("no_fire")){
-            registerBlockItemWithFireRes(name, toReturn);
-        }
-        /*else if(name.equals("black_donut_block")){
-            registerFuelBlockItem(name, toReturn);
-        }*/ else{
-            registerBlockItem(name, toReturn);
-        }
+        registerBlockItem(name, toReturn);
+
         return toReturn;
     }
+    /*private static <T extends Block>RegistryObject<T> registerFuelBlock(String name, Supplier<T> block){
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        //registerFuelBlockItem(name, toReturn);
+        return toReturn;
+    }*/
+
+    private static <T extends Block>RegistryObject<T> registerFireResBlock(String name, Supplier<T> block){
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItemWithFireRes(name, toReturn);
+        return toReturn;
+    }
+
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block){
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));

@@ -25,7 +25,14 @@ public class IcyDwarfWorldMod
     private static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 
+    //Todo
+    //ashen ruins structure??
+    //verdant stone veins
+    //mandarin tree
+    //gooblino mob - tamable, spawns in jungles, tamed with mandarin flowers from leaves
 
+    //recipes
+    //loot tables
     public IcyDwarfWorldMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -37,6 +44,7 @@ public class IcyDwarfWorldMod
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModEntities.ENTITY_TYPES.register(modEventBus);
+        ModParticles.PARTICLES.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

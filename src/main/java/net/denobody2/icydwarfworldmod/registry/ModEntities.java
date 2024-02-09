@@ -1,6 +1,7 @@
 package net.denobody2.icydwarfworldmod.registry;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
+import net.denobody2.icydwarfworldmod.common.entity.FallingAshEntity;
 import net.denobody2.icydwarfworldmod.common.entity.ModBoatEntity;
 import net.denobody2.icydwarfworldmod.common.entity.ModChestBoatEntity;
 import net.minecraft.world.entity.EntityType;
@@ -20,6 +21,9 @@ public class ModEntities {
     public static final RegistryObject<EntityType<ModChestBoatEntity>> MOD_CHEST_BOAT =
             ENTITY_TYPES.register("mod_chest_boat", () -> EntityType.Builder.<ModChestBoatEntity>of(ModChestBoatEntity::new, MobCategory.MISC)
                     .sized(1.375f, 0.5625f).build("mod_chest_boat"));
+
+    public static final RegistryObject<EntityType<FallingAshEntity>> FALLING_ASH = ENTITY_TYPES.register("falling_ash", () -> (EntityType) EntityType.Builder.<FallingAshEntity>of(FallingAshEntity::new, MobCategory.MISC).sized(0.8F, 0.9F).setCustomClientFactory(FallingAshEntity::new).setUpdateInterval(1).setShouldReceiveVelocityUpdates(true).updateInterval(10).clientTrackingRange(20).build("falling_ash"));
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

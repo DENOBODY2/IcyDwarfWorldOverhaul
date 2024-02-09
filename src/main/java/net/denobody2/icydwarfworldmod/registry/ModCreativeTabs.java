@@ -13,7 +13,7 @@ public class ModCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, IcyDwarfWorldMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> TAB = CREATIVE_MODE_TABS.register("icydwarfworldmod", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(ModBlocks.CRATE.get()))
+            .icon(() -> new ItemStack(ModItems.DEIRUM.get()))
             .title(Component.translatable("itemGroup.icydwarfworldmod"))
             .displayItems((pParameters, pOutput) -> {
                 for (var item : ModItems.ITEMS.getEntries()) {

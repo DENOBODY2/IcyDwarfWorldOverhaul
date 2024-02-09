@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "icydwarfworldmod:deirum_ore",
+    "icydwarfworldmod:deepslate_deirum_ore",
+    "icydwarfworldmod:deirum_block"
+  ]
+}

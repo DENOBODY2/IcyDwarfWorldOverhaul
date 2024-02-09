@@ -39,6 +39,17 @@
   "block.icydwarfworldmod.verdant_stone_brick_slab": "Verdant Stone Brick Slab",
   "block.icydwarfworldmod.verdant_stone_brick_wall": "Verdant Stone Brick Wall",
 
+  "block.icydwarfworldmod.deirum_block": "Block of Deirum",
+  "block.icydwarfworldmod.deirum_ore": "Deirum Ore",
+  "block.icydwarfworldmod.deepslate_deirum_ore": "Deepslate Deirum Ore",
+  "item.icydwarfworldmod.deirum": "Deirum Slab",
+  "item.icydwarfworldmod.deirum_sword": "Deirum Sword",
+  "item.icydwarfworldmod.deirum_waraxe": "Deirum Waraxe",
+
+  "block.icydwarfworldmod.ashen_dust": "Ashen Dust Block",
+  "block.icydwarfworldmod.ashen_dust_pile": "Ashen Dust Pile",
+
+  "block.icydwarfworldmod.deepslate_chiseled_bookshelf": "Deepslate Chiseled Bookshelf",
 
   "itemGroup.icydwarfworldmod": "IcyDwarf's World Overhaul"
 }

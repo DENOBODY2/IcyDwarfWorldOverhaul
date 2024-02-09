@@ -5,6 +5,7 @@ import net.denobody2.icydwarfworldmod.common.blocks.entity.CrateBlockEntity;
 import net.denobody2.icydwarfworldmod.common.blocks.entity.ModHangingSignBlockEntity;
 import net.denobody2.icydwarfworldmod.common.blocks.entity.ModSignBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,6 +15,10 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, IcyDwarfWorldMod.MOD_ID);
 
+    public static final RegistryObject<BlockEntityType<ChiseledBookShelfBlockEntity>> DEEPSLATE_CHISELED_BOOKSHELF_BE =
+            BLOCK_ENTITIES.register("deepslate_chiseled_bookshelf_block_entity", () ->
+                    BlockEntityType.Builder.of(ChiseledBookShelfBlockEntity::new,
+                            ModBlocks.DEEPSLATE_CHISELED_BOOKSHELF.get()).build(null));
     public static final RegistryObject<BlockEntityType<CrateBlockEntity>> CRATE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("crate_block_entity", () ->
                     BlockEntityType.Builder.of(CrateBlockEntity::new,

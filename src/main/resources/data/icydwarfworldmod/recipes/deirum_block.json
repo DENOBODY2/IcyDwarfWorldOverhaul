@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "icydwarfworldmod:deirum"
+    }
+  },
+  "result": {
+    "item": "icydwarfworldmod:deirum_block",
+    "count": 1
+  }
+}
