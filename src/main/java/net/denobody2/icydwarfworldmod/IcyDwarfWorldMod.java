@@ -29,7 +29,8 @@ public class IcyDwarfWorldMod
     //ashen ruins structure??
     //verdant stone veins
     //mandarin tree
-    //gooblino mob - tamable, spawns in jungles, tamed with mandarin flowers from leaves
+    //gooblino mob natural spawning
+    //riftling mob - drop magma cream, spits out shadow ball
 
     //recipes
     //loot tables

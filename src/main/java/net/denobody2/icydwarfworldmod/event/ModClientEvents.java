@@ -3,6 +3,7 @@ package net.denobody2.icydwarfworldmod.event;
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.denobody2.icydwarfworldmod.client.ModModelLayers;
 import net.denobody2.icydwarfworldmod.client.particle.FallingAshParticle;
+import net.denobody2.icydwarfworldmod.client.renderer.GooblinoRenderer;
 import net.denobody2.icydwarfworldmod.client.renderer.ModBoatRenderer;
 import net.denobody2.icydwarfworldmod.registry.ModBlockEntities;
 import net.denobody2.icydwarfworldmod.registry.ModEntities;
@@ -28,6 +29,7 @@ public class ModClientEvents {
     public static void clientSetup(FMLClientSetupEvent e) {
         e.enqueueWork(() -> {
             Sheets.addWoodType(ModWoodTypes.MANDARIN);
+            EntityRenderers.register(ModEntities.GOOBLINO.get(), GooblinoRenderer::new);
         });
     }
     @SubscribeEvent

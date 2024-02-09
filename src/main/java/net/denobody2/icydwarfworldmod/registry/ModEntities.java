@@ -2,6 +2,7 @@ package net.denobody2.icydwarfworldmod.registry;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.denobody2.icydwarfworldmod.common.entity.FallingAshEntity;
+import net.denobody2.icydwarfworldmod.common.entity.Gooblino;
 import net.denobody2.icydwarfworldmod.common.entity.ModBoatEntity;
 import net.denobody2.icydwarfworldmod.common.entity.ModChestBoatEntity;
 import net.minecraft.world.entity.EntityType;
@@ -14,6 +15,13 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, IcyDwarfWorldMod.MOD_ID);
+
+    public static final RegistryObject<EntityType<Gooblino>> GOOBLINO =
+            ENTITY_TYPES.register("gooblino", () -> EntityType.Builder.of(Gooblino::new, MobCategory.CREATURE)
+                    .sized(1.5F, 1.0F)
+                    .setTrackingRange(16)
+                    .updateInterval(1)
+                    .build("gooblino"));
 
     public static final RegistryObject<EntityType<ModBoatEntity>> MOD_BOAT =
             ENTITY_TYPES.register("mod_boat", () -> EntityType.Builder.<ModBoatEntity>of(ModBoatEntity::new, MobCategory.MISC)

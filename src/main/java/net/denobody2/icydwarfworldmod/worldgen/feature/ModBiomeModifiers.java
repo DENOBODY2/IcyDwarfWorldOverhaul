@@ -1,21 +1,26 @@
 package net.denobody2.icydwarfworldmod.worldgen.feature;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
+import net.denobody2.icydwarfworldmod.registry.ModEntities;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.List;
+
 public class ModBiomeModifiers {
 
 
     public static final ResourceKey<BiomeModifier> ADD_DEEPSLATE_DEIRUM_ORE = registerKey("add_deepslate_deirum_ore");
+    public static final ResourceKey<BiomeModifier> SPAWN_GOOBLINO = registerKey("spawn_gooblino");
 
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
@@ -28,6 +33,10 @@ public class ModBiomeModifiers {
                 biomes.getOrThrow(BiomeTags.PRODUCES_CORALS_FROM_BONEMEAL),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DEEPSLATE_DEIRUM_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(SPAWN_GOOBLINO, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_JUNGLE),
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.GOOBLINO.get(), 12, 2, 3))));
 
 
 

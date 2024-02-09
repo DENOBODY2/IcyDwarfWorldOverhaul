@@ -5,6 +5,7 @@ import net.denobody2.icydwarfworldmod.common.entity.ModBoatEntity;
 import net.denobody2.icydwarfworldmod.common.item.DeirumSwordItem;
 import net.denobody2.icydwarfworldmod.common.item.ModBoatItem;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,13 +23,18 @@ public class ModItems {
             () -> new ModBoatItem(false, ModBoatEntity.Type.MANDARIN, new Item.Properties()));
     public static final RegistryObject<Item> MANDARIN_CHEST_BOAT = ITEMS.register("mandarin_chest_boat",
             () -> new ModBoatItem(true, ModBoatEntity.Type.MANDARIN, new Item.Properties()));
+
+    public static final RegistryObject<Item> MANDARIN_FLOWER = ITEMS.register("mandarin_flower",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> DEIRUM = ITEMS.register("deirum",
             () -> new Item(new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> DEIRUM_SWORD = ITEMS.register("deirum_sword",
             () -> new DeirumSwordItem(ModToolTiers.DEIRUM, 3, -2.2f, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> DEIRUM_WARAXE = ITEMS.register("deirum_waraxe",
             () -> new AxeItem(ModToolTiers.DEIRUM, 4f, -2.7f, new Item.Properties().fireResistant()));
-
+    public static final RegistryObject<Item> GOOBLINO_SPAWN_EGG = ITEMS.register("gooblino_spawn_egg", () -> new ForgeSpawnEggItem(ModEntities.GOOBLINO, 0x614d4d, 0x685757, new Item.Properties()));
+    public static final RegistryObject<Item> SHADOW_BALL = ITEMS.register("shadow_ball",
+            () -> new Item(new Item.Properties().fireResistant()));
     public static void register(IEventBus eventBus){
 
         ITEMS.register(eventBus);
