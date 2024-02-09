@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "icydwarfworldmod:block/verdant_cobblestone_slab"
+    },
+    "type=double": {
+      "model": "icydwarfworldmod:block/verdant_cobblestone"
+    },
+    "type=top": {
+      "model": "icydwarfworldmod:block/verdant_cobblestone_slab_top"
+    }
+  }
+}

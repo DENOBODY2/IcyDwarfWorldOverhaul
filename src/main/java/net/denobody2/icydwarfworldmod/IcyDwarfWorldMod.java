@@ -1,9 +1,9 @@
 package net.denobody2.icydwarfworldmod;
 
 import com.mojang.logging.LogUtils;
-import net.denobody2.icydwarfworldmod.registry.ModBlocks;
-import net.denobody2.icydwarfworldmod.registry.ModCreativeTabs;
-import net.denobody2.icydwarfworldmod.registry.ModItems;
+import net.denobody2.icydwarfworldmod.registry.*;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -35,6 +35,8 @@ public class IcyDwarfWorldMod
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        ModEntities.ENTITY_TYPES.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "icydwarfworldmod:verdant_cobblestone_wall",
+    "icydwarfworldmod:verdant_stone_brick_wall",
+    "icydwarfworldmod:verdant_cobblestone_stairs",
+    "icydwarfworldmod:verdant_stone_brick_stairs",
+    "icydwarfworldmod:verdant_cobblestone_slab",
+    "icydwarfworldmod:verdant_stone_brick_slab",
+    "icydwarfworldmod:verdant_cobblestone",
+    "icydwarfworldmod:verdant_stone_bricks",
+    "icydwarfworldmod:verdant_stone",
+    "icydwarfworldmod:polished_verdant_stone"
+  ]
+}

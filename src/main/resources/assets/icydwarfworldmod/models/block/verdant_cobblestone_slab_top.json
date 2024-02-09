@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "icydwarfworldmod:block/verdant_cobblestone",
+    "side": "icydwarfworldmod:block/verdant_cobblestone",
+    "top": "icydwarfworldmod:block/verdant_cobblestone"
+  }
+}

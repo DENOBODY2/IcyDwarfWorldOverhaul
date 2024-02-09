@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "icydwarfworldmod:block/verdant_stone_bricks",
+    "side": "icydwarfworldmod:block/verdant_stone_bricks",
+    "top": "icydwarfworldmod:block/verdant_stone_bricks"
+  }
+}

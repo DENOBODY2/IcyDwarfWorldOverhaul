@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "icydwarfworldmod:block/crate_bottom",
+    "side": "icydwarfworldmod:block/crate_side",
+    "top": "icydwarfworldmod:block/crate_top_closed"
+  }
+}

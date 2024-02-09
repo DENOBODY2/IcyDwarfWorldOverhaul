@@ -14,11 +14,31 @@
   "block.icydwarfworldmod.mandarin_fence": "Mandarin Fence",
   "block.icydwarfworldmod.mandarin_fence_gate": "Mandarin Fence Gate",
   "block.icydwarfworldmod.mandarin_pressure_plate": "Mandarin Pressure Plate",
+  "block.icydwarfworldmod.mandarin_sign": "Mandarin Sign",
+  "block.icydwarfworldmod.mandarin_wall_sign": "Mandarin Sign",
+  "block.icydwarfworldmod.mandarin_hanging_sign": "Mandarin Hanging Sign",
+  "block.icydwarfworldmod.mandarin_wall_hanging_sign": "Mandarin Hanging Sign",
 
+  "item.icydwarfworldmod.mandarin_boat": "Mandarin Boat",
+  "item.icydwarfworldmod.mandarin_chest_boat": "Mandarin Chest Boat",
 
-  "block.icydwarfworldmod.gloopshroom_top": "Gloopshroom Top",
-  "block.icydwarfworldmod.gloopshroom_side": "Gloopshroom Side",
-  "block.icydwarfworldmod.gloopshroom": "Gloopshroom",
+  "entity.icydwarfworldmod.mod_chest_boat": "Chest Boat",
+  "entity.icydwarfworldmod.mod_boat": "Boat",
+
+  "block.icydwarfworldmod.crate": "Crate",
+  "icydwarfworldmod.container.crate": "Crate",
+
+  "block.icydwarfworldmod.verdant_stone": "Verdant Stone",
+  "block.icydwarfworldmod.verdant_cobblestone": "Verdant Cobblestone",
+  "block.icydwarfworldmod.verdant_cobblestone_stairs": "Verdant Cobblestone Stairs",
+  "block.icydwarfworldmod.verdant_cobblestone_slab": "Verdant Cobblestone Slab",
+  "block.icydwarfworldmod.verdant_cobblestone_wall": "Verdant Cobblestone Wall",
+  "block.icydwarfworldmod.polished_verdant_stone": "Polished Verdant Stone",
+  "block.icydwarfworldmod.verdant_stone_bricks": "Verdant Stone Bricks",
+  "block.icydwarfworldmod.verdant_stone_brick_stairs": "Verdant Stone Brick Stairs",
+  "block.icydwarfworldmod.verdant_stone_brick_slab": "Verdant Stone Brick Slab",
+  "block.icydwarfworldmod.verdant_stone_brick_wall": "Verdant Stone Brick Wall",
+
 
   "itemGroup.icydwarfworldmod": "IcyDwarf's World Overhaul"
 }

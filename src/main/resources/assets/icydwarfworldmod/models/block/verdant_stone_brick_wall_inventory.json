@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "icydwarfworldmod:block/verdant_stone_bricks"
+  }
+}
