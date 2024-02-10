@@ -1,0 +1,11 @@
+{
+  "type": "icydwarfworldmod:vein",
+  "config": {
+    "state": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "icydwarfworldmod:verdant_stone"
+      }
+    }
+  }
+}

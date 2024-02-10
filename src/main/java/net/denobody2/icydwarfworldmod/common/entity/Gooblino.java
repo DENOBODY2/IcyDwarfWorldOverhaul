@@ -222,6 +222,7 @@ public class Gooblino extends TamableAnimal implements GeoEntity {
                 this.navigation.stop();
                 this.setTarget((LivingEntity)null);
                 this.setOrderedToSit(true);
+                this.setCommand(1);
                 this.level().broadcastEntityEvent(this, (byte)7);
             } else {
                 this.level().broadcastEntityEvent(this, (byte)6);

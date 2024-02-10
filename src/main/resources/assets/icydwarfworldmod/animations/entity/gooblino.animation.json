@@ -113,7 +113,15 @@
 				},
 				"body": {
 					"position": {
-						"vector": [0, "Math.sin(query.anim_time*360) * -0.6", 0]
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, -1, 0]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						}
 					}
 				},
 				"tail": {

@@ -2,6 +2,7 @@ package net.denobody2.icydwarfworldmod.registry;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.denobody2.icydwarfworldmod.common.blocks.*;
+import net.denobody2.icydwarfworldmod.worldgen.feature.tree.MandarinTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -32,6 +33,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MANDARIN_LOG = registerBlock("mandarin_log", () -> new ModFlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
             .sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> MANDARIN_SAPLING = registerBlock("mandarin_sapling", () -> new SaplingBlock(new MandarinTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+            ));
     public static final RegistryObject<Block> MANDARIN_WOOD = registerBlock("mandarin_wood", () -> new ModFlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)
             .sound(SoundType.WOOD)));
     public static final RegistryObject<Block> STRIPPED_MANDARIN_LOG = registerBlock("stripped_mandarin_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)

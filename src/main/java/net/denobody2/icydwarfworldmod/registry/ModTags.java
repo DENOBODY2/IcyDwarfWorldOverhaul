@@ -22,6 +22,8 @@ public class ModTags {
 
         public static final TagKey<Block> GOOBLINO_SPAWNABLE_ON = tag("gooblino_spawnable_on");
 
+        public static final TagKey<Block> VERDANT_STONE_REPLACES = tag("verdant_stone_replaces");
+
 
 
         private static TagKey<Block> tag(String name) {

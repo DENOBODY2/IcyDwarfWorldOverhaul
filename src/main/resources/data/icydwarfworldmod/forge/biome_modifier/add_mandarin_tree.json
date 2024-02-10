@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_jungle",
+  "features": "icydwarfworldmod:mandarin_tree_placed",
+  "step": "vegetal_decoration"
+}

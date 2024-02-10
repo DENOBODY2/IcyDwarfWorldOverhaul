@@ -20,7 +20,9 @@ public class ModBiomeModifiers {
 
 
     public static final ResourceKey<BiomeModifier> ADD_DEEPSLATE_DEIRUM_ORE = registerKey("add_deepslate_deirum_ore");
+    public static final ResourceKey<BiomeModifier> ADD_MANDARIN_TREE = registerKey("add_mandarin_tree");
     public static final ResourceKey<BiomeModifier> SPAWN_GOOBLINO = registerKey("spawn_gooblino");
+    public static final ResourceKey<BiomeModifier> ADD_VERDANT_STONE_VEIN = registerKey("add_verdant_stone_vein");
 
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
@@ -33,6 +35,16 @@ public class ModBiomeModifiers {
                 biomes.getOrThrow(BiomeTags.PRODUCES_CORALS_FROM_BONEMEAL),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DEEPSLATE_DEIRUM_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_VERDANT_STONE_VEIN, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.ALLOWS_TROPICAL_FISH_SPAWNS_AT_ANY_HEIGHT),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.VERDANT_STONE_VEIN_PLACED)),
+                GenerationStep.Decoration.RAW_GENERATION));
+
+        context.register(ADD_MANDARIN_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_JUNGLE),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MANDARIN_TREE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(SPAWN_GOOBLINO, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_JUNGLE),

@@ -26,14 +26,30 @@ public class IcyDwarfWorldMod
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 
     //Todo
-    //ashen ruins structure??
-    //verdant stone veins
-    //mandarin tree
-    //gooblino mob natural spawning
+    //mandarin tree - custom shape
     //riftling mob - drop magma cream, spits out shadow ball
-
+    //shadow ball - grenade projectile, rift explosion
+    //shadow weapons
     //recipes
     //loot tables
+
+    //maybe Todo
+    //shadowstone, shadow upgrade template
+    //shadowstone hut structure
+    //riftling neutral behavior
+
+    //update 1 Todo
+    //ash
+    //ashen dungeon, ash spider
+    //spooky
+    //spooky geode, spooky crystals, spooky helmet
+    //eyeball, eye drop
+    //maybe some of the og concept stuff(there was a spooky guy)
+    //pirate
+    //pirate structure, pirate mob
+    //pirate weapon
+
+
     public IcyDwarfWorldMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -46,6 +62,7 @@ public class IcyDwarfWorldMod
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModEntities.ENTITY_TYPES.register(modEventBus);
         ModParticles.PARTICLES.register(modEventBus);
+        ModFeatureTypes.FEATURES.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

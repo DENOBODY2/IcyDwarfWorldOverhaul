@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:allows_tropical_fish_spawns_at_any_height",
+  "features": "icydwarfworldmod:verdant_stone_vein_placed",
+  "step": "raw_generation"
+}

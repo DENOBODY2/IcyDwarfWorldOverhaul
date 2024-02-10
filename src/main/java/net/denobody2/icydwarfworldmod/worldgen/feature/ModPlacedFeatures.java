@@ -1,10 +1,13 @@
 package net.denobody2.icydwarfworldmod.worldgen.feature;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
+import net.denobody2.icydwarfworldmod.registry.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -17,6 +20,8 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> DEEPSLATE_DEIRUM_ORE_PLACED_KEY = registerKey("deepslate_deirum_ore_placed");
+    public static final ResourceKey<PlacedFeature> VERDANT_STONE_VEIN_PLACED = registerKey("verdant_stone_vein");
+    public static final ResourceKey<PlacedFeature> MANDARIN_TREE_PLACED_KEY = registerKey("mandarin_tree_placed");
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -25,6 +30,10 @@ public class ModPlacedFeatures {
         register(context, DEEPSLATE_DEIRUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEEPSLATE_DEIRUM_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(10,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(-12))));
+
+        register(context, MANDARIN_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MANDARIN_TREE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        ModBlocks.MANDARIN_SAPLING.get()));
 
 
     }
