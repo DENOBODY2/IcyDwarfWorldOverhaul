@@ -270,10 +270,11 @@ public class ModBlocks {
             .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final RegistryObject<Block> ASHEN_DUST = registerBlock("ashen_dust", () -> new FallingBlock(BlockBehaviour.Properties.copy(Blocks.SAND)
-            .sound(SoundType.SAND)));
+            .sound(SoundType.SAND)
+            .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ASHEN_DUST_PILE = registerBlock("ashen_dust_pile", () ->new AshPileBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).replaceable().forceSolidOff().randomTicks().strength(0.1F).requiresCorrectToolForDrops().sound(SoundType.SAND).isViewBlocking((p_187417_, p_187418_, p_187419_) -> {
         return p_187417_.getValue(AshPileBlock.LAYERS) >= 8;
-    }).pushReaction(PushReaction.DESTROY)));
+    }).pushReaction(PushReaction.DESTROY).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_CHISELED_BOOKSHELF = registerBlock("deepslate_chiseled_bookshelf", () -> new DeepSlateChiseledBookshelfBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_BOOKSHELF)
             .requiresCorrectToolForDrops()

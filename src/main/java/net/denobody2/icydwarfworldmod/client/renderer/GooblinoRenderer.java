@@ -16,12 +16,13 @@ public class GooblinoRenderer extends GeoEntityRenderer<Gooblino> {
     }
     @Override
     public ResourceLocation getTextureLocation(Gooblino animatable) {
-        String s = ChatFormatting.stripFormatting(animatable.getName().getString());
-        if ("Gooblington".equals(s) || "Sir Gooblington".equals(s)) {
+        //String s = ChatFormatting.stripFormatting(animatable.getName().getString());
+        /*if ("Gooblington".equals(s) || "Sir Gooblington".equals(s)) {
             return new ResourceLocation(IcyDwarfWorldMod.MOD_ID,"textures/entity/gooblino_british.png");
         } else{
             return new ResourceLocation(IcyDwarfWorldMod.MOD_ID,"textures/entity/gooblino.png");
-        }
+        }*/
+        return new ResourceLocation(IcyDwarfWorldMod.MOD_ID,"textures/entity/gooblino.png");
     }
     @Override
     public void render(Gooblino entity, float entityYaw, float partialTick, PoseStack poseStack,

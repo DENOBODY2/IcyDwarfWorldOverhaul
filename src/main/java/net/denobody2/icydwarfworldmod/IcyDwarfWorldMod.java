@@ -27,18 +27,16 @@ public class IcyDwarfWorldMod
 
     //Todo
     //mandarin tree - custom shape
-    //riftling mob - drop magma cream, spits out shadow ball
+    //mystery meat
+    //riftling mob - drop magma cream, spits out shadow ball.
+    //name tag skins - oscar riftling
     //shadow ball - grenade projectile, rift explosion
     //shadow weapons
     //recipes
-    //loot tables
-
-    //maybe Todo
-    //shadowstone, shadow upgrade template
-    //shadowstone hut structure
     //riftling neutral behavior
 
     //update 1 Todo
+    //british gooblino
     //ash
     //ashen dungeon, ash spider
     //spooky
