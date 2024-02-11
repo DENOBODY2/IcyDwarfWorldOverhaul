@@ -1,0 +1,42 @@
+{
+  "parent": "icydwarfworldmod:deirum",
+  "criteria": {
+    "killed_riftling": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "icydwarfworldmod:riftling"
+        }
+      }
+    }, "interact_riftling": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "icydwarfworldmod:riftling"
+        }
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Discover a Riftling"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "icydwarfworldmod:riftling_spawn_egg"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Dimensional Merge"
+    }
+  },
+  "requirements": [
+    [
+      "interact_riftling",
+      "killed_riftling"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

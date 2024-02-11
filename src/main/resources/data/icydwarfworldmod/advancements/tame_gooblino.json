@@ -1,0 +1,34 @@
+{
+  "parent": "icydwarfworldmod:discover_gooblino",
+  "criteria": {
+    "tame_gooblino": {
+      "trigger": "minecraft:tame_animal",
+      "conditions": {
+        "entity": {
+          "type": "icydwarfworldmod:gooblino"
+        }
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Tame a Gooblino with Mandarin Flowers"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:bone"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Pet Slab of Meat"
+    }
+  },
+  "requirements": [
+    [
+      "tame_gooblino"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

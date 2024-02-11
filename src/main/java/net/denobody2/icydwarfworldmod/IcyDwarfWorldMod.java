@@ -32,14 +32,14 @@ public class IcyDwarfWorldMod
     //shadow ball - grenade projectile, rift explosion
     //shadow weapons
     //recipes - just shadow weapons (crafting_shaped)
-    //riftling neutral behavior
-    //recipe unlocks
-    //advancements
+    //finish riftling explosion
+    //recipe unlocks - just shadow weapons
+    //advancements - just shadow weapons
 
     //Todo Art
     //mandarin leaves and flowered mandarin leaves
     //mystery meat
-    //shadow weapon
+    //shadow weapons
     //rift particle
 
     //update 1 Todo

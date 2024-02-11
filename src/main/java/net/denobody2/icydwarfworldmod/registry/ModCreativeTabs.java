@@ -57,7 +57,7 @@ public class ModCreativeTabs {
                 pOutput.accept(ModBlocks.DEIRUM_BLOCK.get());
                 pOutput.accept(ModItems.DEIRUM.get());
                 pOutput.accept(ModItems.DEIRUM_SWORD.get());
-                pOutput.accept(ModItems.DEIRUM_WARAXE.get());
+                pOutput.accept(ModItems.DEIRUM_AXE.get());
                 pOutput.accept(ModItems.RIFTLING_SPAWN_EGG.get());
                 pOutput.accept(ModItems.SHADOW_BALL.get());
 

@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_mandarin_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "icydwarfworldmod:mandarin_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "icydwarfworldmod:textures/block/deirum_ore.png",
+    "description": {
+      "text": "Obtain a Mandarin Log"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "icydwarfworldmod:mandarin_log"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Icydwarf's World Overhaul"
+    }
+  },
+  "requirements": [
+    [
+      "has_mandarin_log"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

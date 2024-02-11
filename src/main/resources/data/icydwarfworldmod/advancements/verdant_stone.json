@@ -1,0 +1,38 @@
+{
+  "parent": "icydwarfworldmod:icydwarfworldmod",
+  "criteria": {
+    "has_verdant_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "icydwarfworldmod:verdant_cobblestone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Obtain Verdant Cobblestone"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "icydwarfworldmod:verdant_cobblestone"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Chlorophyll Rock"
+    }
+  },
+  "requirements": [
+    [
+      "has_verdant_cobblestone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

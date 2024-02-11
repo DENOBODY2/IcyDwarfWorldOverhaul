@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ashen_dust": {
+      "conditions": {
+        "items": [
+          {
+            "item": [
+              "icydwarfworldmod:ashen_dust"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "icydwarfworldmod:ashen_dust_pile"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ashen_dust",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "icydwarfworldmod:ashen_dust_pile"
+    ]
+  },
+  "sends_telemetry_event": true
+}

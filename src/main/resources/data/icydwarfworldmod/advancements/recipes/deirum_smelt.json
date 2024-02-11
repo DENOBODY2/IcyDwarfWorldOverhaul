@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deirum_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "icydwarfworldmod:deirum_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "icydwarfworldmod:deirum_smelt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_deirum_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "icydwarfworldmod:deirum_smelt"
+    ]
+  },
+  "sends_telemetry_event": true
+}

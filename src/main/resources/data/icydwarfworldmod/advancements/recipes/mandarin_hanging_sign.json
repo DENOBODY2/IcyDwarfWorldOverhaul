@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mandarin_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "icydwarfworldmod:mandarin_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "icydwarfworldmod:mandarin_hanging_sign"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_mandarin_planks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "icydwarfworldmod:mandarin_hanging_sign"
+    ]
+  },
+  "sends_telemetry_event": true
+}

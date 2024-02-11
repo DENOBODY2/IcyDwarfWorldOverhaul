@@ -1,0 +1,38 @@
+{
+  "parent": "icydwarfworldmod:discover_riftling",
+  "criteria": {
+    "has_shadow_ball": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "icydwarfworldmod:shadow_ball"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Obtain a Shadow Ball from a Riftling"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "icydwarfworldmod:shadow_ball"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Pondering My Orb"
+    }
+  },
+  "requirements": [
+    [
+      "has_shadow_ball"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

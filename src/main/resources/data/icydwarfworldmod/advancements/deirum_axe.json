@@ -1,0 +1,38 @@
+{
+  "parent": "icydwarfworldmod:deirum",
+  "criteria": {
+    "has_deirum_waraxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "icydwarfworldmod:deirum_axe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Obtain a Deirum Axe"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "icydwarfworldmod:deirum_axe"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Seabed Axe"
+    }
+  },
+  "requirements": [
+    [
+      "has_deirum_axe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

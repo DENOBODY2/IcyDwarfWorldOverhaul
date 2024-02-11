@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_verdant_stone": {
+      "conditions": {
+        "items": [
+          {
+            "item": [
+              "icydwarfworldmod:verdant_stone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "icydwarfworldmod:verdant_stone_brick_wall_fstone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_verdant_stone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "icydwarfworldmod:verdant_stone_brick_wall_fstone_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": true
+}

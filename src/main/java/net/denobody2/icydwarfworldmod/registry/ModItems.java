@@ -30,7 +30,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> DEIRUM_SWORD = ITEMS.register("deirum_sword",
             () -> new DeirumSwordItem(ModToolTiers.DEIRUM, 3, -2.2f, new Item.Properties().fireResistant()));
-    public static final RegistryObject<Item> DEIRUM_WARAXE = ITEMS.register("deirum_waraxe",
+    public static final RegistryObject<Item> DEIRUM_AXE = ITEMS.register("deirum_axe",
             () -> new AxeItem(ModToolTiers.DEIRUM, 4f, -2.7f, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> RIFTLING_SPAWN_EGG = ITEMS.register("riftling_spawn_egg", () -> new ForgeSpawnEggItem(ModEntities.RIFTLING, 0x2d174a, 0x770d9e, new Item.Properties()));
 

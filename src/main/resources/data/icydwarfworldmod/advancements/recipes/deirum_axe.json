@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deirum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "icydwarfworldmod:deirum"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "icydwarfworldmod:deirum_axe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_deirum",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "icydwarfworldmod:deirum_axe"
+    ]
+  },
+  "sends_telemetry_event": true
+}

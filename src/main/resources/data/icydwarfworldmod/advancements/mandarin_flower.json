@@ -1,0 +1,38 @@
+{
+  "parent": "icydwarfworldmod:icydwarfworldmod",
+  "criteria": {
+    "has_mandarin_flower": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "icydwarfworldmod:mandarin_flower"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Obtain a Mandarin Flower"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "icydwarfworldmod:mandarin_flower"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Pretty Plant Clutter"
+    }
+  },
+  "requirements": [
+    [
+      "has_mandarin_flower"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

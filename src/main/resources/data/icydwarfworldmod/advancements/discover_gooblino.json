@@ -1,0 +1,42 @@
+{
+  "parent": "icydwarfworldmod:mandarin_flower",
+  "criteria": {
+    "killed_gooblino": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "icydwarfworldmod:gooblino"
+        }
+      }
+    }, "interact_gooblino": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "icydwarfworldmod:gooblino"
+        }
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Discover a Gooblino"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "icydwarfworldmod:gooblino_spawn_egg"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "It Came From The School Cafeteria"
+    }
+  },
+  "requirements": [
+    [
+      "killed_gooblino",
+      "interact_gooblino"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

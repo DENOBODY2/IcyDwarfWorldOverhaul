@@ -1,0 +1,38 @@
+{
+  "parent": "icydwarfworldmod:icydwarfworldmod",
+  "criteria": {
+    "has_deirum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "icydwarfworldmod:deirum"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Obtain Deirum"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "icydwarfworldmod:deirum"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Ore of The Ancients"
+    }
+  },
+  "requirements": [
+    [
+      "has_deirum"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

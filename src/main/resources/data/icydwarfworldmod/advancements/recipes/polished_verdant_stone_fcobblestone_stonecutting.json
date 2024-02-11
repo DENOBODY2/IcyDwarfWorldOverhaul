@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_verdant_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "item": [
+              "icydwarfworldmod:verdant_cobblestone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "icydwarfworldmod:polished_verdant_stone_fcobblestone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_verdant_cobblestone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "icydwarfworldmod:polished_verdant_stone_fcobblestone_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": true
+}
