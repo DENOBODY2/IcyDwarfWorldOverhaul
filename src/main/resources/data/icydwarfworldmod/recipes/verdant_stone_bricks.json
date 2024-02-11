@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "yy",
+    "yy"
+  ],
+  "key": {
+    "y": {
+      "item": "icydwarfworldmod:verdant_stone"
+    }
+  },
+  "result": {
+    "item": "icydwarfworldmod:verdant_stone_bricks",
+    "count": 4
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "yyy"
+  ],
+  "key": {
+    "y": {
+      "item": "icydwarfworldmod:verdant_cobblestone"
+    }
+  },
+  "result": {
+    "item": "icydwarfworldmod:verdant_cobblestone_slab",
+    "count": 6
+  }
+}

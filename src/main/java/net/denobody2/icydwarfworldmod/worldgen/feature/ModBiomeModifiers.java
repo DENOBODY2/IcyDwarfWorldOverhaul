@@ -22,6 +22,8 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_DEEPSLATE_DEIRUM_ORE = registerKey("add_deepslate_deirum_ore");
     public static final ResourceKey<BiomeModifier> ADD_MANDARIN_TREE = registerKey("add_mandarin_tree");
     public static final ResourceKey<BiomeModifier> SPAWN_GOOBLINO = registerKey("spawn_gooblino");
+
+    public static final ResourceKey<BiomeModifier> SPAWN_RIFTLING = registerKey("spawn_riftling");
     public static final ResourceKey<BiomeModifier> ADD_VERDANT_STONE_VEIN = registerKey("add_verdant_stone_vein");
 
 
@@ -49,6 +51,10 @@ public class ModBiomeModifiers {
         context.register(SPAWN_GOOBLINO, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_JUNGLE),
                 List.of(new MobSpawnSettings.SpawnerData(ModEntities.GOOBLINO.get(), 12, 2, 3))));
+
+        context.register(SPAWN_RIFTLING, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.RIFTLING.get(), 3, 1, 3))));
 
 
 

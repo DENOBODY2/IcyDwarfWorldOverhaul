@@ -1,0 +1,10 @@
+{
+  "values": [
+    "#minecraft:base_stone_overworld",
+    "#minecraft:dirt",
+    "minecraft:clay",
+    "minecraft:gravel",
+    "minecraft:sand",
+    "icydwarfworldmod:verdant_stone"
+  ]
+}

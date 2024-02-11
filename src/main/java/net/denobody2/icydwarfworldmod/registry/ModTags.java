@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class Items {
+        public static final TagKey<Item> RIFTLING_IGNITERS = tag("riftling_igniters");
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(IcyDwarfWorldMod.MOD_ID, name));
         }
@@ -22,7 +23,11 @@ public class ModTags {
 
         public static final TagKey<Block> GOOBLINO_SPAWNABLE_ON = tag("gooblino_spawnable_on");
 
+        public static final TagKey<Block> RIFTLING_SPAWNABLE_ON = tag("riftling_spawnable_on");
+
         public static final TagKey<Block> VERDANT_STONE_REPLACES = tag("verdant_stone_replaces");
+
+        public static final TagKey<Block> MANDARIN_LOGS = tag("mandarin_logs");
 
 
 

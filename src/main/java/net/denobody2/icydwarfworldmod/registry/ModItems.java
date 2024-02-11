@@ -32,9 +32,11 @@ public class ModItems {
             () -> new DeirumSwordItem(ModToolTiers.DEIRUM, 3, -2.2f, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> DEIRUM_WARAXE = ITEMS.register("deirum_waraxe",
             () -> new AxeItem(ModToolTiers.DEIRUM, 4f, -2.7f, new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> RIFTLING_SPAWN_EGG = ITEMS.register("riftling_spawn_egg", () -> new ForgeSpawnEggItem(ModEntities.RIFTLING, 0x2d174a, 0x770d9e, new Item.Properties()));
+
     public static final RegistryObject<Item> GOOBLINO_SPAWN_EGG = ITEMS.register("gooblino_spawn_egg", () -> new ForgeSpawnEggItem(ModEntities.GOOBLINO, 0x614d4d, 0x685757, new Item.Properties()));
     public static final RegistryObject<Item> SHADOW_BALL = ITEMS.register("shadow_ball",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new Item(new Item.Properties().fireResistant().stacksTo(16)));
     public static void register(IEventBus eventBus){
 
         ITEMS.register(eventBus);

@@ -1,10 +1,7 @@
 package net.denobody2.icydwarfworldmod.registry;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
-import net.denobody2.icydwarfworldmod.common.entity.FallingAshEntity;
-import net.denobody2.icydwarfworldmod.common.entity.Gooblino;
-import net.denobody2.icydwarfworldmod.common.entity.ModBoatEntity;
-import net.denobody2.icydwarfworldmod.common.entity.ModChestBoatEntity;
+import net.denobody2.icydwarfworldmod.common.entity.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,7 +19,12 @@ public class ModEntities {
                     .setTrackingRange(16)
                     .updateInterval(1)
                     .build("gooblino"));
-
+    public static final RegistryObject<EntityType<Riftling>> RIFTLING =
+            ENTITY_TYPES.register("riftling", () -> EntityType.Builder.of(Riftling::new, MobCategory.MONSTER)
+                    .sized(1.4F, 1.5F)
+                    .setTrackingRange(16)
+                    .updateInterval(1)
+                    .build("riftling"));
     public static final RegistryObject<EntityType<ModBoatEntity>> MOD_BOAT =
             ENTITY_TYPES.register("mod_boat", () -> EntityType.Builder.<ModBoatEntity>of(ModBoatEntity::new, MobCategory.MISC)
                     .sized(1.375f, 0.5625f).build("mod_boat"));

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "y y",
+    "yyy"
+  ],
+  "key": {
+    "y": {
+      "item": "icydwarfworldmod:mandarin_planks"
+    }
+  },
+  "result": {
+    "item": "icydwarfworldmod:mandarin_boat",
+    "count": 1
+  }
+}

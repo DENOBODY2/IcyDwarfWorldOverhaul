@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "icydwarfworldmod:mandarin_logs"
+    }
+  ],
+  "result": {
+    "item": "icydwarfworldmod:mandarin_planks",
+    "count": 4
+  }
+}

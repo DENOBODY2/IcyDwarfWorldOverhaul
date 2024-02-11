@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "icydwarfworldmod:ashen_dust_pile"
+    }
+  },
+  "result": {
+    "item": "icydwarfworldmod:ashen_dust",
+    "count": 3
+  }
+}

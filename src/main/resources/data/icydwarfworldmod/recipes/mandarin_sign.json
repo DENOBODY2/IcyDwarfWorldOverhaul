@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "yyy",
+    "yyy",
+    " x "
+  ],
+  "key": {
+    "y": {
+      "item": "icydwarfworldmod:mandarin_planks"
+    },
+    "x": {
+      "item": "icydwarfworldmod:mandarin_stick"
+    }
+  },
+  "result": {
+    "item": "icydwarfworldmod:mandarin_sign",
+    "count": 3
+  }
+}

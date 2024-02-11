@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "yy",
+    "yy"
+  ],
+  "key": {
+    "y": {
+      "item": "icydwarfworldmod:stripped_mandarin_log"
+    }
+  },
+  "result": {
+    "item": "icydwarfworldmod:stripped_mandarin_wood",
+    "count": 3
+  }
+}

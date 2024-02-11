@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyx",
+    "xyx"
+  ],
+  "key": {
+    "y": {
+      "item": "icydwarfworldmod:mandarin_planks"
+    },
+    "x": {
+      "item": "icydwarfworldmod:mandarin_stick"
+    }
+  },
+  "result": {
+    "item": "icydwarfworldmod:mandarin_fence_gate",
+    "count": 1
+  }
+}

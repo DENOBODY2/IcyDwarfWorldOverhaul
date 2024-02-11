@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "icydwarfworldmod:block/creative_tab_icon",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "icydwarfworldmod:block/creative_tab_icon",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "icydwarfworldmod:block/creative_tab_icon"
+    },
+    "facing=west": {
+      "model": "icydwarfworldmod:block/creative_tab_icon",
+      "y": 90
+    }
+  }
+}

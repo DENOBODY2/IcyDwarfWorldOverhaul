@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyx",
+    "y y",
+    "xyx"
+  ],
+  "key": {
+    "x": {
+      "tag": "minecraft:planks"
+    },
+    "y": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "icydwarfworldmod:crate",
+    "count": 1
+  }
+}

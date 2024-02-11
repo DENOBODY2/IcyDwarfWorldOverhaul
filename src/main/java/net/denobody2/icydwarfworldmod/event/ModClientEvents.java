@@ -5,6 +5,7 @@ import net.denobody2.icydwarfworldmod.client.ModModelLayers;
 import net.denobody2.icydwarfworldmod.client.particle.FallingAshParticle;
 import net.denobody2.icydwarfworldmod.client.renderer.GooblinoRenderer;
 import net.denobody2.icydwarfworldmod.client.renderer.ModBoatRenderer;
+import net.denobody2.icydwarfworldmod.client.renderer.RiftlingRenderer;
 import net.denobody2.icydwarfworldmod.registry.ModBlockEntities;
 import net.denobody2.icydwarfworldmod.registry.ModEntities;
 import net.denobody2.icydwarfworldmod.registry.ModParticles;
@@ -30,6 +31,7 @@ public class ModClientEvents {
         e.enqueueWork(() -> {
             Sheets.addWoodType(ModWoodTypes.MANDARIN);
             EntityRenderers.register(ModEntities.GOOBLINO.get(), GooblinoRenderer::new);
+            EntityRenderers.register(ModEntities.RIFTLING.get(), RiftlingRenderer::new);
         });
     }
     @SubscribeEvent

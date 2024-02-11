@@ -13,7 +13,7 @@ public class ModCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, IcyDwarfWorldMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> TAB = CREATIVE_MODE_TABS.register("icydwarfworldmod", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(ModItems.DEIRUM.get()))
+            .icon(() -> new ItemStack(ModBlocks.CREATIVE_TAB_ICON.get()))
             .title(Component.translatable("itemGroup.icydwarfworldmod"))
             .displayItems((pParameters, pOutput) -> {
                 pOutput.accept(ModBlocks.MANDARIN_SAPLING.get());
@@ -27,8 +27,11 @@ public class ModCreativeTabs {
                 pOutput.accept(ModBlocks.MANDARIN_PLANKS.get());
                 pOutput.accept(ModBlocks.MANDARIN_STAIRS.get());
                 pOutput.accept(ModBlocks.MANDARIN_SLAB.get());
+                pOutput.accept(ModBlocks.MANDARIN_FENCE.get());
+                pOutput.accept(ModBlocks.MANDARIN_FENCE_GATE.get());
                 pOutput.accept(ModBlocks.MANDARIN_DOOR.get());
                 pOutput.accept(ModBlocks.MANDARIN_TRAPDOOR.get());
+                pOutput.accept(ModBlocks.MANDARIN_PRESSURE_PLATE.get());
                 pOutput.accept(ModBlocks.MANDARIN_BUTTON.get());
                 pOutput.accept(ModItems.MANDARIN_SIGN.get());
                 pOutput.accept(ModItems.MANDARIN_HANGING_SIGN.get());
@@ -55,6 +58,7 @@ public class ModCreativeTabs {
                 pOutput.accept(ModItems.DEIRUM.get());
                 pOutput.accept(ModItems.DEIRUM_SWORD.get());
                 pOutput.accept(ModItems.DEIRUM_WARAXE.get());
+                pOutput.accept(ModItems.RIFTLING_SPAWN_EGG.get());
                 pOutput.accept(ModItems.SHADOW_BALL.get());
 
 

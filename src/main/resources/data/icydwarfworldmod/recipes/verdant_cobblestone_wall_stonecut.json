@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "icydwarfworldmod:verdant_cobblestone"
+  },
+  "result": "icydwarfworldmod:verdant_cobblestone_wall"
+}

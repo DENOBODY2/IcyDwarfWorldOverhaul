@@ -254,6 +254,10 @@ public class ModBlocks {
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> CREATIVE_TAB_ICON = registerBlock("creative_tab_icon", () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops().noOcclusion()));
+
 
 
     public static final RegistryObject<Block> DEIRUM_ORE = registerFireResBlock("deirum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)
