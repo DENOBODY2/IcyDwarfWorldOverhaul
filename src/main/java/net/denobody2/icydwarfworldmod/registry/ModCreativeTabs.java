@@ -16,6 +16,7 @@ public class ModCreativeTabs {
             .icon(() -> new ItemStack(ModBlocks.CREATIVE_TAB_ICON.get()))
             .title(Component.translatable("itemGroup.icydwarfworldmod"))
             .displayItems((pParameters, pOutput) -> {
+                pOutput.accept(ModBlocks.CRATE.get());
                 pOutput.accept(ModBlocks.MANDARIN_SAPLING.get());
                 pOutput.accept(ModBlocks.MANDARIN_LOG.get());
                 pOutput.accept(ModBlocks.MANDARIN_LEAVES.get());
@@ -38,7 +39,7 @@ public class ModCreativeTabs {
                 pOutput.accept(ModItems.MANDARIN_BOAT.get());
                 pOutput.accept(ModItems.MANDARIN_CHEST_BOAT.get());
                 pOutput.accept(ModItems.GOOBLINO_SPAWN_EGG.get());
-                pOutput.accept(ModBlocks.CRATE.get());
+                pOutput.accept(ModItems.MYSTERY_MEAT.get());
                 pOutput.accept(ModBlocks.ASHEN_DUST.get());
                 pOutput.accept(ModBlocks.ASHEN_DUST_PILE.get());
                 pOutput.accept(ModBlocks.DEEPSLATE_CHISELED_BOOKSHELF.get());

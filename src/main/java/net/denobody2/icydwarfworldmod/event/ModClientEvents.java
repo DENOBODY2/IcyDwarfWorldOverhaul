@@ -1,7 +1,7 @@
 package net.denobody2.icydwarfworldmod.event;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
-import net.denobody2.icydwarfworldmod.client.ModModelLayers;
+import net.denobody2.icydwarfworldmod.client.model.layer.ModModelLayers;
 import net.denobody2.icydwarfworldmod.client.particle.FallingAshParticle;
 import net.denobody2.icydwarfworldmod.client.renderer.GooblinoRenderer;
 import net.denobody2.icydwarfworldmod.client.renderer.ModBoatRenderer;
@@ -9,7 +9,7 @@ import net.denobody2.icydwarfworldmod.client.renderer.RiftlingRenderer;
 import net.denobody2.icydwarfworldmod.registry.ModBlockEntities;
 import net.denobody2.icydwarfworldmod.registry.ModEntities;
 import net.denobody2.icydwarfworldmod.registry.ModParticles;
-import net.denobody2.icydwarfworldmod.registry.ModWoodTypes;
+import net.denobody2.icydwarfworldmod.util.ModWoodTypes;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.Sheets;
@@ -17,6 +17,7 @@ import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.FallingBlockRenderer;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
@@ -32,6 +33,7 @@ public class ModClientEvents {
             Sheets.addWoodType(ModWoodTypes.MANDARIN);
             EntityRenderers.register(ModEntities.GOOBLINO.get(), GooblinoRenderer::new);
             EntityRenderers.register(ModEntities.RIFTLING.get(), RiftlingRenderer::new);
+            EntityRenderers.register(ModEntities.SHADOW_BALL_PROJECTILE.get(), ThrownItemRenderer::new);
         });
     }
     @SubscribeEvent

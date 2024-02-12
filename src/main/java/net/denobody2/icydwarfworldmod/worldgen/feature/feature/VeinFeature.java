@@ -1,7 +1,7 @@
 package net.denobody2.icydwarfworldmod.worldgen.feature.feature;
 
 import com.mojang.serialization.Codec;
-import net.denobody2.icydwarfworldmod.registry.ModTags;
+import net.denobody2.icydwarfworldmod.util.ModTags;
 import net.denobody2.icydwarfworldmod.util.FastNoise;
 import net.denobody2.icydwarfworldmod.worldgen.feature.config.VeinConfig;
 import net.minecraft.core.BlockPos;
@@ -32,10 +32,10 @@ public class VeinFeature extends Feature<VeinConfig> {
         int range = 16;
         int yRange = range / 2;
         BlockPos.MutableBlockPos mutableBlockPos = new BlockPos.MutableBlockPos();
-        for (int x = 0; x < range; x++) {
-            for (int z = 0; z < range; z++) {
-                for (int y = -yRange; y < yRange; y++) {
-                    mutableBlockPos.set(blockPos.getX() + x, blockPos.getY() + y, blockPos.getZ() + z);
+        for (int i = 0; i < range; i++) {
+            for (int j = 0; j < range; j++) {
+                for (int l = -yRange; l < yRange; l++) {
+                    mutableBlockPos.set(blockPos.getX() + i, blockPos.getY() + l, blockPos.getZ() + j);
                     int y1 = mutableBlockPos.getY();
                     y1 /= 0.5D;
                     double noise = fastNoise.GetNoise(mutableBlockPos.getX(), y1, mutableBlockPos.getZ());

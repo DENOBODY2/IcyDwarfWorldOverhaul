@@ -23,13 +23,12 @@ public class IcyDwarfWorldMod
     public static final String MOD_ID = "icydwarfworldmod";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 
     //Todo
     //mandarin tree - custom shape
-    //mystery meat
+    //mystery meat - waiting texture, feature done
     //rift particle
-    //shadow ball - grenade projectile, rift explosion
+    //shadow ball - basic explosion done, needs rift
     //shadow weapons - basic implementation done, rift particle needed
     //finish riftling explosion
 
@@ -39,7 +38,7 @@ public class IcyDwarfWorldMod
     //rift particle
 
     //update 1 Todo
-    //british gooblinoecb
+    //british gooblino
     //-
     //ash
     //ashen dungeon, ash spider

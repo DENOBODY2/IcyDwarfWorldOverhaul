@@ -3,12 +3,12 @@ package net.denobody2.icydwarfworldmod.registry;
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.denobody2.icydwarfworldmod.common.blocks.*;
 import net.denobody2.icydwarfworldmod.common.item.DeirumBlockItem;
+import net.denobody2.icydwarfworldmod.util.ModBlockSetTypes;
+import net.denobody2.icydwarfworldmod.util.ModWoodTypes;
 import net.denobody2.icydwarfworldmod.worldgen.feature.tree.MandarinTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -17,7 +17,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,7 +24,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
-import java.util.stream.Stream;
 
 public class ModBlocks {
     public static DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, IcyDwarfWorldMod.MOD_ID);

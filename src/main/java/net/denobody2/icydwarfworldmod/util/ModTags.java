@@ -1,4 +1,4 @@
-package net.denobody2.icydwarfworldmod.registry;
+package net.denobody2.icydwarfworldmod.util;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.minecraft.resources.ResourceLocation;

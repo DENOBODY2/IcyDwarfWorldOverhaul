@@ -2,10 +2,9 @@ package net.denobody2.icydwarfworldmod.registry;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.denobody2.icydwarfworldmod.common.entity.ModBoatEntity;
-import net.denobody2.icydwarfworldmod.common.item.DeirumSwordItem;
-import net.denobody2.icydwarfworldmod.common.item.ModBoatItem;
-import net.denobody2.icydwarfworldmod.common.item.ShadowHammerWeaponItem;
-import net.denobody2.icydwarfworldmod.common.item.ShadowWeaponItem;
+import net.denobody2.icydwarfworldmod.common.item.*;
+import net.denobody2.icydwarfworldmod.util.ModFoodProperties;
+import net.denobody2.icydwarfworldmod.util.ModToolTiers;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -46,7 +45,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> GOOBLINO_SPAWN_EGG = ITEMS.register("gooblino_spawn_egg", () -> new ForgeSpawnEggItem(ModEntities.GOOBLINO, 0x614d4d, 0x685757, new Item.Properties()));
     public static final RegistryObject<Item> SHADOW_BALL = ITEMS.register("shadow_ball",
-            () -> new Item(new Item.Properties().fireResistant().stacksTo(16)));
+            () -> new ShadowBallItem(new Item.Properties().fireResistant().stacksTo(16)));
+    public static final RegistryObject<Item> MYSTERY_MEAT = ITEMS.register("mystery_meat",
+            ()-> new Item(new Item.Properties().food(ModFoodProperties.MYSTERY_MEAT)));
     public static void register(IEventBus eventBus){
 
         ITEMS.register(eventBus);

@@ -1,4 +1,4 @@
-package net.denobody2.icydwarfworldmod.client;
+package net.denobody2.icydwarfworldmod.client.model.layer;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.minecraft.client.model.geom.ModelLayerLocation;

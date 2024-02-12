@@ -25,6 +25,14 @@ public class ModEntities {
                     .setTrackingRange(16)
                     .updateInterval(1)
                     .build("riftling"));
+    public static final RegistryObject<EntityType<ShadowBallProjectile>> SHADOW_BALL_PROJECTILE =
+            ENTITY_TYPES.register("shadow_ball_projectile",
+                    () -> EntityType.Builder.<ShadowBallProjectile>of(ShadowBallProjectile::new, MobCategory.MISC)
+                            .sized(0.5f, 0.5f)
+                            .clientTrackingRange(4)
+                            .updateInterval(1)
+                            .setCustomClientFactory((spawnEntity, level) -> new ShadowBallProjectile(level))
+                            .build("shadow_ball_projectile"));
     public static final RegistryObject<EntityType<ModBoatEntity>> MOD_BOAT =
             ENTITY_TYPES.register("mod_boat", () -> EntityType.Builder.<ModBoatEntity>of(ModBoatEntity::new, MobCategory.MISC)
                     .sized(1.375f, 0.5625f).build("mod_boat"));

@@ -20,9 +20,12 @@
   "block.icydwarfworldmod.mandarin_wall_hanging_sign": "Mandarin Hanging Sign",
   "block.icydwarfworldmod.mandarin_sapling": "Mandarin Sapling",
   "item.icydwarfworldmod.mandarin_flower": "Mandarin Flower",
-
   "item.icydwarfworldmod.mandarin_boat": "Mandarin Boat",
   "item.icydwarfworldmod.mandarin_chest_boat": "Mandarin Chest Boat",
+
+  "entity.icydwarfworldmod.gooblino": "Gooblino",
+  "item.icydwarfworldmod.gooblino_spawn_egg": "Gooblino Spawn Egg",
+  "item.icydwarfworldmod.mystery_meat": "Mystery Meat",
 
   "entity.icydwarfworldmod.mod_chest_boat": "Chest Boat",
   "entity.icydwarfworldmod.mod_boat": "Boat",
@@ -54,19 +57,17 @@
   "block.icydwarfworldmod.deepslate_chiseled_bookshelf": "Deepslate Chiseled Bookshelf",
   "block.icydwarfworldmod.creative_tab_icon": "Creative Tab Icon",
 
-  "entity.icydwarfworldmod.gooblino": "Gooblino",
-  "item.icydwarfworldmod.gooblino_spawn_egg": "Gooblino Spawn Egg",
-
   "entity.icydwarfworldmod.riftling": "Riftling",
   "item.icydwarfworldmod.riftling_spawn_egg": "Riftling Spawn Egg",
-
   "item.icydwarfworldmod.shadow_ball": "Shadow Ball",
   "item.icydwarfworldmod.shadow_gem": "Shadow Gem",
   "item.icydwarfworldmod.shadow_great_hammer": "Shadow Greathammer",
   "item.icydwarfworldmod.shadow_sword": "Shadow Sword",
+  "entity.icydwarfworldmod.shadow_ball_projectile": "Shadow Ball Projectile",
 
   "itemGroup.icydwarfworldmod": "IcyDwarf's World Overhaul",
   "entity.icydwarfworldmod.all.command_0": "%s is wandering",
   "entity.icydwarfworldmod.all.command_1": "%s is staying",
   "entity.icydwarfworldmod.all.command_2": "%s is following"
+
 }
