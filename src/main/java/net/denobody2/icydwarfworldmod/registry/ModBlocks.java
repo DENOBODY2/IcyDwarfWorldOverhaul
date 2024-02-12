@@ -187,7 +187,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MANDARIN_BUTTON = registerBlock("mandarin_button", () -> woodenButton(ModBlockSetTypes.MANDARIN));
 
 
-    public static final RegistryObject<Block> MANDARIN_LEAVES = registerBlock("mandarin_leaves", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+    public static final RegistryObject<Block> MANDARIN_LEAVES = registerBlock("mandarin_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
             .sound(SoundType.GRASS)){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -204,7 +204,7 @@ public class ModBlocks {
             return 30;
         }
     });
-    public static final RegistryObject<Block> FLOWERED_MANDARIN_LEAVES = registerBlock("flowered_mandarin_leaves", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+    public static final RegistryObject<Block> FLOWERED_MANDARIN_LEAVES = registerBlock("flowered_mandarin_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
             .sound(SoundType.GRASS)){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {

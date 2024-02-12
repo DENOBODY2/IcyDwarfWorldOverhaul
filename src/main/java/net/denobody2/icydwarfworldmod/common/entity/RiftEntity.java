@@ -58,12 +58,13 @@ public class RiftEntity extends Entity {
     public RiftEntity(Level worldIn, double x, double y, double z, LivingEntity casterIn, int lifeSpan, float explosionRadius) {
         this(ModEntities.RIFT.get(), worldIn);
         this.setOwner(casterIn);
-        wasPlayerOwned = this.owner instanceof Player;
         this.owner = casterIn;
         this.ownerUUID = casterIn.getUUID();
         this.setLifespan(lifeSpan);
         this.setPos(x, y, z);
         this.explosionRadius = explosionRadius;
+        wasPlayerOwned = casterIn instanceof Player;
+
     }
     public void tick() {
         this.owner = getOwner();
@@ -75,10 +76,10 @@ public class RiftEntity extends Entity {
             madeOpenNoise = true;
         }
 
-        for (Entity entity : this.level().getEntities(this, this.getBoundingBox().inflate(17))) {
+        for (Entity entity : this.level().getEntities(this, this.getBoundingBox().inflate(10))) {
             if(wasPlayerOwned){
                 if(owner != null){
-                    if (entity != this.owner && entity.getUUID() != this.ownerUUID) {
+                    if (entity != owner && entity.getUUID() != ownerUUID) {
                         if (!(entity instanceof Player && ((Player) entity).getAbilities().invulnerable)) {
                             if (!isAlliedTo(entity)){
                                 Vec3 diff = entity.position().subtract(this.position().add(0, 0, 0));
@@ -96,6 +97,7 @@ public class RiftEntity extends Entity {
                     this.owner = getOwner();
                 }
             } else {
+                this.owner = getOwner();
                 if (entity != this.owner && entity.getUUID() != this.ownerUUID) {
                     if (!(entity instanceof Player && ((Player) entity).getAbilities().invulnerable)) {
                         if (!isAlliedTo(entity)){
@@ -123,7 +125,7 @@ public class RiftEntity extends Entity {
             this.resetAmbientSoundTime();
         }
         if(this.getLifespan() > 5){
-            for(int p = 0; p < 4; p++){
+            for(int p = 0; p < 6; p++){
                 this.level().addParticle(ParticleTypes.PORTAL, this.getRandomX(1D), this.getRandomY() - 0.25D, this.getRandomZ(1D), (this.random.nextDouble() - 0.5D) * 2.0D, -this.random.nextDouble(), (this.random.nextDouble() - 0.5D) * 2.0D);
             }
         }
@@ -155,7 +157,7 @@ public class RiftEntity extends Entity {
         }
     }
     public void tickStage(){
-        this.setStage((int) this.getLifespan() / 66);
+        this.setStage((int) this.getLifespan() / 40);
     }
     private void damage(LivingEntity Hitentity) {
         LivingEntity livingentity = this.getOwner();
@@ -202,8 +204,10 @@ public class RiftEntity extends Entity {
 
 
     public void setOwner(LivingEntity livingEntity) {
-        this.owner = livingEntity;
-        this.ownerUUID = livingEntity.getUUID();
+        if(livingEntity != null){
+            this.owner = livingEntity;
+            this.ownerUUID = livingEntity.getUUID();
+        }
     }
 
     @Nullable

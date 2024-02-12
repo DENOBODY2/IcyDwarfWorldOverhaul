@@ -21,6 +21,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.AcaciaFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
@@ -52,9 +53,9 @@ public class ModConfiguredFeatures {
         register(context, DEEPSLATE_DEIRUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldDeirumOres, 9, 0.0f));
         register(context, MANDARIN_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.MANDARIN_LOG.get()),
-                new ForkingTrunkPlacer(5, 4, 3),
+                new ForkingTrunkPlacer(3, 4, 3),
                 new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ModBlocks.MANDARIN_LEAVES.get().defaultBlockState(), 3).add(ModBlocks.FLOWERED_MANDARIN_LEAVES.get().defaultBlockState(), 1)),
-                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
+                new AcaciaFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2)),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
 

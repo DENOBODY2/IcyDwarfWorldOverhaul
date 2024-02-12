@@ -2,6 +2,7 @@ package net.denobody2.icydwarfworldmod.worldgen.feature;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.denobody2.icydwarfworldmod.registry.ModEntities;
+import net.denobody2.icydwarfworldmod.util.ModTags;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.List;
@@ -44,12 +46,12 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.RAW_GENERATION));
 
         context.register(ADD_MANDARIN_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_JUNGLE),
+                biomes.getOrThrow(ModTags.Biomes.MANDARIN_SPAWNS),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MANDARIN_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(SPAWN_GOOBLINO, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_JUNGLE),
+                biomes.getOrThrow(ModTags.Biomes.MANDARIN_SPAWNS),
                 List.of(new MobSpawnSettings.SpawnerData(ModEntities.GOOBLINO.get(), 12, 2, 3))));
 
         context.register(SPAWN_RIFTLING, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(

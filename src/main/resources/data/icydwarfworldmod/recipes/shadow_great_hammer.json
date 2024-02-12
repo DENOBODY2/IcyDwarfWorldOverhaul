@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "xyx",
-    "xyx",
+    "xzx",
+    "xzx",
     " y "
   ],
   "key": {
@@ -11,6 +11,9 @@
     },
     "y": {
       "item": "minecraft:stick"
+    },
+    "z": {
+      "item": "icydwarfworldmod:shadow_ball"
     }
   },
   "result": {

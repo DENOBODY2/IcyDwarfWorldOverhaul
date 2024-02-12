@@ -1,7 +1,7 @@
 {
   "parent": "icydwarfworldmod:deirum",
   "criteria": {
-    "has_deirum_waraxe": {
+    "has_deirum_axe": {
       "conditions": {
         "items": [
           {

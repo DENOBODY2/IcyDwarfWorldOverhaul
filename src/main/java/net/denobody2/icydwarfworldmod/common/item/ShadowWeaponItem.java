@@ -42,7 +42,7 @@ public class ShadowWeaponItem extends SwordItem {
     }
     private void spawnRift(BlockPos blockPos, Level level, Player player) {
         if(!player.getCooldowns().isOnCooldown(this)){
-            level.addFreshEntity(new RiftEntity(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), player, 70, 1.2F));
+            level.addFreshEntity(new RiftEntity(level, blockPos.getX(), blockPos.getY()+1, blockPos.getZ(), player, 70, 1.2F));
             player.getCooldowns().addCooldown(this, 140);
         }
     }

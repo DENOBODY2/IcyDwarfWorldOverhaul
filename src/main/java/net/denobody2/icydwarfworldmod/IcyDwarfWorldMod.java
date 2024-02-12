@@ -25,13 +25,10 @@ public class IcyDwarfWorldMod
     private static final Logger LOGGER = LogUtils.getLogger();
 
     //Todo
-    //mandarin tree - custom shape
-    //mystery meat - waiting texture, feature done
+    //mystery meat - waiting texture, feature done, need loot table
 
     //Todo Art
-    //mandarin leaves and flowered mandarin leaves
     //mystery meat
-    //shadow hammer fix
 
     //update 1 Todo
     //british gooblino
