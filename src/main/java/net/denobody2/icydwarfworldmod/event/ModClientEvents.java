@@ -5,6 +5,7 @@ import net.denobody2.icydwarfworldmod.client.model.layer.ModModelLayers;
 import net.denobody2.icydwarfworldmod.client.particle.FallingAshParticle;
 import net.denobody2.icydwarfworldmod.client.renderer.GooblinoRenderer;
 import net.denobody2.icydwarfworldmod.client.renderer.ModBoatRenderer;
+import net.denobody2.icydwarfworldmod.client.renderer.RiftRenderer;
 import net.denobody2.icydwarfworldmod.client.renderer.RiftlingRenderer;
 import net.denobody2.icydwarfworldmod.registry.ModBlockEntities;
 import net.denobody2.icydwarfworldmod.registry.ModEntities;
@@ -34,6 +35,7 @@ public class ModClientEvents {
             EntityRenderers.register(ModEntities.GOOBLINO.get(), GooblinoRenderer::new);
             EntityRenderers.register(ModEntities.RIFTLING.get(), RiftlingRenderer::new);
             EntityRenderers.register(ModEntities.SHADOW_BALL_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.RIFT.get(), RiftRenderer::new);
         });
     }
     @SubscribeEvent

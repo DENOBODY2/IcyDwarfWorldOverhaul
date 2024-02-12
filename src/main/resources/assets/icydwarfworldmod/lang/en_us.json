@@ -64,6 +64,7 @@
   "item.icydwarfworldmod.shadow_great_hammer": "Shadow Greathammer",
   "item.icydwarfworldmod.shadow_sword": "Shadow Sword",
   "entity.icydwarfworldmod.shadow_ball_projectile": "Shadow Ball Projectile",
+  "entity.icydwarfworldmod.rift": "Shadow Rift",
 
   "itemGroup.icydwarfworldmod": "IcyDwarf's World Overhaul",
   "entity.icydwarfworldmod.all.command_0": "%s is wandering",

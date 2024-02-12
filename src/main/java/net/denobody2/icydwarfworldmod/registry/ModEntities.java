@@ -33,6 +33,13 @@ public class ModEntities {
                             .updateInterval(1)
                             .setCustomClientFactory((spawnEntity, level) -> new ShadowBallProjectile(level))
                             .build("shadow_ball_projectile"));
+
+    public static final RegistryObject<EntityType<RiftEntity>> RIFT = ENTITY_TYPES.register("rift", () -> EntityType.Builder.<RiftEntity>of(RiftEntity::new, MobCategory.MISC)
+            .sized(1.0F, 1.0F)
+            .fireImmune()
+            .clientTrackingRange(10).
+            updateInterval(Integer.MAX_VALUE)
+            .build("rift"));
     public static final RegistryObject<EntityType<ModBoatEntity>> MOD_BOAT =
             ENTITY_TYPES.register("mod_boat", () -> EntityType.Builder.<ModBoatEntity>of(ModBoatEntity::new, MobCategory.MISC)
                     .sized(1.375f, 0.5625f).build("mod_boat"));

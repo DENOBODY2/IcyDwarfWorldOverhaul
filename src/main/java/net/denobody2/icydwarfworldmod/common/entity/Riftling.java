@@ -235,28 +235,14 @@ public class Riftling extends PathfinderMob implements GeoEntity {
             float f = this.isPowered() ? 2.0F : 1.0F;
             this.dead = true;
             this.level().explode(this, this.getX(), this.getY(), this.getZ(), (float)this.explosionRadius * f, Level.ExplosionInteraction.MOB);
+            this.spawnRift(this.blockPosition());
             this.discard();
             //this.spawnLingeringCloud();
         }
 
     }
-    private void spawnLingeringCloud() {
-        Collection<MobEffectInstance> collection = this.getActiveEffects();
-        if (!collection.isEmpty()) {
-            AreaEffectCloud areaeffectcloud = new AreaEffectCloud(this.level(), this.getX(), this.getY(), this.getZ());
-            areaeffectcloud.setRadius(2.5F);
-            areaeffectcloud.setRadiusOnUse(-0.5F);
-            areaeffectcloud.setWaitTime(10);
-            areaeffectcloud.setDuration(areaeffectcloud.getDuration() / 2);
-            areaeffectcloud.setRadiusPerTick(-areaeffectcloud.getRadius() / (float)areaeffectcloud.getDuration());
-
-            for(MobEffectInstance mobeffectinstance : collection) {
-                areaeffectcloud.addEffect(new MobEffectInstance(mobeffectinstance));
-            }
-
-            this.level().addFreshEntity(areaeffectcloud);
-        }
-
+    private void spawnRift(BlockPos blockPos) {
+        this.level().addFreshEntity(new RiftEntity(this.level(), blockPos.getX(), blockPos.getY(), blockPos.getZ(), this, 160, 2.0F));
     }
     public boolean isIgnited() {
         return this.entityData.get(DATA_IS_IGNITED);

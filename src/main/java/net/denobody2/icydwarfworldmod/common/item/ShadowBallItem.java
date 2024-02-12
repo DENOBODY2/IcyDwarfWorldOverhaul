@@ -32,7 +32,7 @@ public class ShadowBallItem extends Item {
             itemstack.shrink(1);
         }
         if(!pPlayer.getCooldowns().isOnCooldown(this)){
-            pPlayer.getCooldowns().addCooldown(this, 25);
+            pPlayer.getCooldowns().addCooldown(this, 100);
         }
         return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
     }

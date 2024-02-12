@@ -27,15 +27,11 @@ public class IcyDwarfWorldMod
     //Todo
     //mandarin tree - custom shape
     //mystery meat - waiting texture, feature done
-    //rift particle
-    //shadow ball - basic explosion done, needs rift
-    //shadow weapons - basic implementation done, rift particle needed
-    //finish riftling explosion
 
     //Todo Art
     //mandarin leaves and flowered mandarin leaves
     //mystery meat
-    //rift particle
+    //shadow hammer fix
 
     //update 1 Todo
     //british gooblino
