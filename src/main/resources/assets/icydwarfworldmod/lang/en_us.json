@@ -61,6 +61,9 @@
   "item.icydwarfworldmod.riftling_spawn_egg": "Riftling Spawn Egg",
 
   "item.icydwarfworldmod.shadow_ball": "Shadow Ball",
+  "item.icydwarfworldmod.shadow_gem": "Shadow Gem",
+  "item.icydwarfworldmod.shadow_great_hammer": "Shadow Greathammer",
+  "item.icydwarfworldmod.shadow_sword": "Shadow Sword",
 
   "itemGroup.icydwarfworldmod": "IcyDwarf's World Overhaul",
   "entity.icydwarfworldmod.all.command_0": "%s is wandering",

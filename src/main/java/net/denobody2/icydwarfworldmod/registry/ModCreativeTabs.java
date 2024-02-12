@@ -60,6 +60,9 @@ public class ModCreativeTabs {
                 pOutput.accept(ModItems.DEIRUM_AXE.get());
                 pOutput.accept(ModItems.RIFTLING_SPAWN_EGG.get());
                 pOutput.accept(ModItems.SHADOW_BALL.get());
+                pOutput.accept(ModItems.SHADOW_GEM.get());
+                pOutput.accept(ModItems.SHADOW_SWORD.get());
+                pOutput.accept(ModItems.SHADOW_GREAT_HAMMER.get());
 
 
 

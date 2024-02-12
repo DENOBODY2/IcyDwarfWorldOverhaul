@@ -28,4 +28,5 @@ public class RiftlingModel extends GeoModel<Riftling> {
     public void setCustomAnimations(Riftling animatable, long instanceId, AnimationState<Riftling> animationState) {
 
     }
+
 }

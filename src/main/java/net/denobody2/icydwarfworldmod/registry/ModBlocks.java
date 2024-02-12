@@ -2,6 +2,7 @@ package net.denobody2.icydwarfworldmod.registry;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.denobody2.icydwarfworldmod.common.blocks.*;
+import net.denobody2.icydwarfworldmod.common.item.DeirumBlockItem;
 import net.denobody2.icydwarfworldmod.worldgen.feature.tree.MandarinTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -270,7 +271,7 @@ public class ModBlocks {
             .strength(30.0F, 1200.0F)
             .requiresCorrectToolForDrops()
             .sound(SoundType.DEEPSLATE),UniformInt.of(3, 6)));
-    public static final RegistryObject<Block> DEIRUM_BLOCK = registerFireResBlock("deirum_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)
+    public static final RegistryObject<Block> DEIRUM_BLOCK = registerDeirumBlock("deirum_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)
             .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final RegistryObject<Block> ASHEN_DUST = registerBlock("ashen_dust", () -> new FallingBlock(BlockBehaviour.Properties.copy(Blocks.SAND)
@@ -301,6 +302,12 @@ public class ModBlocks {
 
         return toReturn;
     }
+    private static <T extends Block>RegistryObject<T> registerDeirumBlock(String name, Supplier<T> block){
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerDeirumBlockItem(name, toReturn);
+
+        return toReturn;
+    }
     /*private static <T extends Block>RegistryObject<T> registerFuelBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         //registerFuelBlockItem(name, toReturn);
@@ -322,6 +329,9 @@ public class ModBlocks {
     }*/
     private static <T extends Block>RegistryObject<Item> registerBlockItemWithFireRes(String name, RegistryObject<T> block){
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().fireResistant()));
+    }
+    private static <T extends Block>RegistryObject<Item> registerDeirumBlockItem(String name, RegistryObject<T> block){
+        return ModItems.ITEMS.register(name, () -> new DeirumBlockItem(block.get(), new Item.Properties().fireResistant()));
     }
 
 }

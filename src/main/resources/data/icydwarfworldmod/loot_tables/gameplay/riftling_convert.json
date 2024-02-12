@@ -1,0 +1,15 @@
+{
+  "pools": [
+    {
+      "name": "riftling_convert",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "icydwarfworldmod:shadow_gem",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

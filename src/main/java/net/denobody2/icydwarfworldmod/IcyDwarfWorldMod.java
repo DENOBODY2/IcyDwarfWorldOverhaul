@@ -30,29 +30,29 @@ public class IcyDwarfWorldMod
     //mystery meat
     //rift particle
     //shadow ball - grenade projectile, rift explosion
-    //shadow weapons
-    //recipes - just shadow weapons (crafting_shaped)
+    //shadow weapons - basic implementation done, rift particle needed
     //finish riftling explosion
-    //recipe unlocks - just shadow weapons
-    //advancements - just shadow weapons
 
     //Todo Art
     //mandarin leaves and flowered mandarin leaves
     //mystery meat
-    //shadow weapons
     //rift particle
 
     //update 1 Todo
-    //british gooblino
+    //british gooblinoecb
+    //-
     //ash
     //ashen dungeon, ash spider
+    //-
     //spooky
     //spooky geode, spooky crystals, spooky helmet
     //eyeball, eye drop
-    //maybe some of the og concept stuff(there was a spooky guy)
+    //maybe some og concept stuff(there was a spooky guy)
+    //-
     //pirate
     //pirate structure, pirate mob
     //pirate weapon
+
 
 
     public IcyDwarfWorldMod()

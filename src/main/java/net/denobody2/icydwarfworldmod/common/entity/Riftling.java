@@ -4,6 +4,8 @@ import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.denobody2.icydwarfworldmod.common.entity.ai.AnimalFollowOwnerGoal;
 import net.denobody2.icydwarfworldmod.common.entity.ai.GooblinoWanderGoal;
 import net.denobody2.icydwarfworldmod.common.entity.ai.RiftlingSwellGoal;
+import net.denobody2.icydwarfworldmod.common.item.DeirumBlockItem;
+import net.denobody2.icydwarfworldmod.registry.ModBlocks;
 import net.denobody2.icydwarfworldmod.registry.ModEntities;
 import net.denobody2.icydwarfworldmod.registry.ModItems;
 import net.denobody2.icydwarfworldmod.registry.ModTags;
@@ -59,6 +61,7 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.fml.common.Mod;
 import org.checkerframework.checker.units.qual.A;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -88,6 +91,8 @@ public class Riftling extends PathfinderMob implements GeoEntity {
     private static final EntityDataAccessor<Boolean> DATA_IS_POWERED = SynchedEntityData.defineId(Riftling.class, EntityDataSerializers.BOOLEAN);
 
     public static final ResourceLocation BARTER_LOOT = new ResourceLocation(IcyDwarfWorldMod.MOD_ID, "gameplay/riftling_barter");
+
+    public static final ResourceLocation CONVERT_LOOT = new ResourceLocation(IcyDwarfWorldMod.MOD_ID, "gameplay/riftling_convert");
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
@@ -202,19 +207,26 @@ public class Riftling extends PathfinderMob implements GeoEntity {
     private void digestItem() {
         if (!level().isClientSide) {
             this.setDeltaMovement(0.0F, this.getDeltaMovement().y, 0.0F);
-            LootTable loottable = level().getServer().getLootData().getLootTable(BARTER_LOOT);
-            List<ItemStack> items = loottable.getRandomItems((new LootParams.Builder((ServerLevel) this.level())).withParameter(LootContextParams.THIS_ENTITY, this).create(LootContextParamSets.PIGLIN_BARTER));
-            items.forEach(this::spawnAtLocation);
+            if(this.getMainHandItem().getItem() == Items.MAGMA_CREAM){
+                LootTable loottable = level().getServer().getLootData().getLootTable(BARTER_LOOT);
+                List<ItemStack> items = loottable.getRandomItems((new LootParams.Builder((ServerLevel) this.level())).withParameter(LootContextParams.THIS_ENTITY, this).create(LootContextParamSets.PIGLIN_BARTER));
+                items.forEach(this::spawnAtLocation);
+            }
+            if(this.getMainHandItem().getItem() instanceof DeirumBlockItem){
+                LootTable loottable = level().getServer().getLootData().getLootTable(CONVERT_LOOT);
+                List<ItemStack> items = loottable.getRandomItems((new LootParams.Builder((ServerLevel) this.level())).withParameter(LootContextParams.THIS_ENTITY, this).create(LootContextParamSets.PIGLIN_BARTER));
+                items.forEach(this::spawnAtLocation);
+            }
         }
         this.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
     }
     public boolean isDigesting() {
-        return this.getItemInHand(InteractionHand.MAIN_HAND).is(Items.MAGMA_CREAM);
+        return this.getItemInHand(InteractionHand.MAIN_HAND).is(ModTags.Items.RIFTLING_DIGESTS);
     }
     public @NotNull InteractionResult mobInteract(Player pPlayer, @NotNull InteractionHand pHand) {
         final ItemStack itemstack = pPlayer.getItemInHand(pHand);
         final InteractionResult type = super.mobInteract(pPlayer, pHand);
-        if (itemstack.is(Items.MAGMA_CREAM) && !this.isDigesting() && !type.consumesAction()) {
+        if (itemstack.is(ModTags.Items.RIFTLING_DIGESTS) && !this.isDigesting() && !type.consumesAction()) {
             ItemStack copy = itemstack.copy();
             if (!pPlayer.getAbilities().instabuild) {
                 itemstack.shrink(1);

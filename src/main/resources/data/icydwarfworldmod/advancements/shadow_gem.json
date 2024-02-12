@@ -1,12 +1,12 @@
 {
-  "parent": "icydwarfworldmod:discover_riftling",
+  "parent": "icydwarfworldmod:shadow_ball",
   "criteria": {
-    "has_shadow_ball": {
+    "has_shadow_gem": {
       "conditions": {
         "items": [
           {
             "items": [
-              "icydwarfworldmod:shadow_ball"
+              "icydwarfworldmod:shadow_gem"
             ]
           }
         ]
@@ -17,21 +17,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "text": "Obtain a Shadow Ball by giving a Riftling Magma Cream"
+      "text": "Obtain a Shadow Gem by giving a Riftling a Block of Deirum"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "icydwarfworldmod:shadow_ball"
+      "item": "icydwarfworldmod:shadow_gem"
     },
     "show_toast": true,
     "title": {
-      "text": "Pondering My Orb"
+      "text": "The Dark Crystal"
     }
   },
   "requirements": [
     [
-      "has_shadow_ball"
+      "has_shadow_gem"
     ]
   ],
   "sends_telemetry_event": true

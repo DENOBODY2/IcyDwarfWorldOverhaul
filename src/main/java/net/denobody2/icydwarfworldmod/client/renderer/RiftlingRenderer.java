@@ -2,28 +2,24 @@ package net.denobody2.icydwarfworldmod.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Axis;
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
-import net.denobody2.icydwarfworldmod.client.model.GooblinoModel;
 import net.denobody2.icydwarfworldmod.client.model.RiftlingModel;
-import net.denobody2.icydwarfworldmod.common.entity.Gooblino;
 import net.denobody2.icydwarfworldmod.common.entity.Riftling;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import software.bernie.example.entity.ReplacedCreeperEntity;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
+import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
 
 public class RiftlingRenderer extends GeoEntityRenderer<Riftling> {
+
     private ItemInHandRenderer itemInHandRenderer;
     public RiftlingRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new RiftlingModel());
@@ -74,5 +70,6 @@ public class RiftlingRenderer extends GeoEntityRenderer<Riftling> {
         float verticalSwell = (1.0F + swellFactor * 0.1F) / swellMod;
         poseStack.scale(horizontalSwell, verticalSwell, horizontalSwell);
     }
+
 
 }

@@ -1,0 +1,41 @@
+{
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Obtain the Shadow Weapons, Weapons Imbued With The Power of a Rift"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "icydwarfworldmod:shadow_sword"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Rift Amalgamations"
+    }
+  },
+  "parent": "icydwarfworldmod:shadow_gem",
+  "criteria": {
+    "shadow_sword": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["icydwarfworldmod:shadow_sword"]
+          }
+        ]
+      }
+    },
+    "shadow_great_hammer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["icydwarfworldmod:shadow_great_hammer"]
+          }
+        ]
+      }
+    }
+  },
+  "sends_telemetry_event": true
+}
