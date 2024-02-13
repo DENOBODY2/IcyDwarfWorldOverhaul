@@ -20,9 +20,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageSources;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -72,11 +70,11 @@ public class RiftEntity extends Entity {
         super.tick();
         if(!madeOpenNoise){
             this.gameEvent(GameEvent.ENTITY_PLACE);
-            this.playSound(SoundEvents.ENDERMAN_TELEPORT, 0.4F, 1 + random.nextFloat() * 0.2F);
+            this.playSound(SoundEvents.DRAGON_FIREBALL_EXPLODE, 0.7F, 1 - random.nextFloat() * 0.2F);
             madeOpenNoise = true;
         }
 
-        for (Entity entity : this.level().getEntities(this, this.getBoundingBox().inflate(10))) {
+        for (Entity entity : this.level().getEntities(this, this.getBoundingBox().inflate(11))) {
             if(wasPlayerOwned){
                 if(owner != null){
                     if (entity != owner && entity.getUUID() != ownerUUID) {
@@ -84,8 +82,13 @@ public class RiftEntity extends Entity {
                             if (!isAlliedTo(entity)){
                                 Vec3 diff = entity.position().subtract(this.position().add(0, 0, 0));
                                 if (entity instanceof LivingEntity) {
-                                    diff = diff.normalize().scale( getStage() * 0.015);
-                                    entity.setDeltaMovement(entity.getDeltaMovement().subtract(diff));
+                                    if(entity instanceof  Player || (entity instanceof TamableAnimal && ((TamableAnimal) entity).getOwner() != null)){
+                                        diff = diff.normalize().scale( getStage() * 0.015);
+                                        entity.setDeltaMovement(entity.getDeltaMovement().subtract(diff));
+                                    } else {
+                                        diff = diff.normalize().scale( (getStage()+3) * 0.015);
+                                        entity.setDeltaMovement(entity.getDeltaMovement().subtract(diff));
+                                    }
                                 } else {
                                     diff = diff.normalize().scale(getStage() * 0.045);
                                     entity.setDeltaMovement(entity.getDeltaMovement().subtract(diff));
@@ -103,8 +106,13 @@ public class RiftEntity extends Entity {
                         if (!isAlliedTo(entity)){
                             Vec3 diff = entity.position().subtract(this.position().add(0, 0, 0));
                             if (entity instanceof LivingEntity) {
-                                diff = diff.normalize().scale( getStage() * 0.015);
-                                entity.setDeltaMovement(entity.getDeltaMovement().subtract(diff));
+                                if(entity instanceof  Player || (entity instanceof TamableAnimal && ((TamableAnimal) entity).getOwner() != null)){
+                                    diff = diff.normalize().scale( getStage() * 0.015);
+                                    entity.setDeltaMovement(entity.getDeltaMovement().subtract(diff));
+                                } else {
+                                    diff = diff.normalize().scale( getStage()+2 * 0.015);
+                                    entity.setDeltaMovement(entity.getDeltaMovement().subtract(diff));
+                                }
                             } else {
                                 diff = diff.normalize().scale(getStage() * 0.045);
                                 entity.setDeltaMovement(entity.getDeltaMovement().subtract(diff));
@@ -121,7 +129,7 @@ public class RiftEntity extends Entity {
 
 
         if (this.random.nextInt(400) < this.ambientSoundTime++) {
-            this.playSound(SoundEvents.PORTAL_AMBIENT, 0.4F, 1 + random.nextFloat() * 0.2F);
+            this.playSound(SoundEvents.PORTAL_AMBIENT, 0.3F, 1 + random.nextFloat() * 0.4F);
             this.resetAmbientSoundTime();
         }
         if(this.getLifespan() > 5){
@@ -135,7 +143,7 @@ public class RiftEntity extends Entity {
         if(this.getLifespan() <= 25){
             if(!madeCloseNoise){
                 this.gameEvent(GameEvent.ENTITY_PLACE);
-                this.playSound(SoundEvents.END_PORTAL_SPAWN, 0.2F, 1 + random.nextFloat() * 0.2F);
+                this.playSound(SoundEvents.END_PORTAL_SPAWN, 0.15F, 1 - random.nextFloat() * 0.1F);
                 madeCloseNoise = true;
             }
             if(this.tickCount % 10 == 0){
@@ -158,6 +166,9 @@ public class RiftEntity extends Entity {
     }
     public void tickStage(){
         this.setStage((int) this.getLifespan() / 40);
+        if(this.getStage() < 1){
+            setStage(1);
+        }
     }
     private void damage(LivingEntity Hitentity) {
         LivingEntity livingentity = this.getOwner();

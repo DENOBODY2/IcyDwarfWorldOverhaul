@@ -43,7 +43,7 @@ public class ShadowBallProjectile extends ThrowableItemProjectile {
     }
     private void spawnRift(BlockPos blockPos) {
         if(owner != null){
-            this.level().addFreshEntity(new RiftEntity(this.level(), blockPos.getX(), blockPos.getY()+1, blockPos.getZ(), this.owner, 120, 1.7F));
+            this.level().addFreshEntity(new RiftEntity(this.level(), blockPos.getX(), blockPos.getY()+1, blockPos.getZ(), this.owner, 140, 1.7F));
 
         }
     }

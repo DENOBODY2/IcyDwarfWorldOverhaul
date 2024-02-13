@@ -15,6 +15,7 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> RIFTLING_IGNITERS = tag("riftling_igniters");
         public static final TagKey<Item> RIFTLING_DIGESTS = tag("riftling_digests");
+        public static final TagKey<Item> MANDARIN_LOGS = tag("mandarin_logs");
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(IcyDwarfWorldMod.MOD_ID, name));
         }

@@ -25,16 +25,32 @@ public class IcyDwarfWorldMod
     private static final Logger LOGGER = LogUtils.getLogger();
 
     //Todo
-    //mystery meat - waiting texture, feature done, need loot table
+    //mystery meat - waiting texture, feature done
 
     //Todo Art
     //mystery meat
+    //rift
+
+    //Todo Sound
+    //gooblino idle, walk, hurt, die
+    //riftling idle, walk, hurt, die, digest
+    //crate maybe?
+    //rift close, idle, open
 
     //update 1 Todo
     //british gooblino
     //-
     //ash
     //ashen dungeon, ash spider
+    //ash lantern (ash particle)
+    //ash bricks & ash tiles
+    //ashen bellows (ash gust bellows)
+    //-
+    //demon
+    //summoning altar block
+    //burning ash block
+    //demon mob, ash demon armor
+    //demon shard
     //-
     //spooky
     //spooky geode, spooky crystals, spooky helmet
@@ -42,7 +58,8 @@ public class IcyDwarfWorldMod
     //maybe some og concept stuff(there was a spooky guy)
     //-
     //pirate
-    //pirate structure, pirate mob
+    //pirate structure, pirate mob?
+    //pirate cosmetics
     //pirate weapon
 
 

@@ -47,19 +47,19 @@ public class ShadowWeaponItem extends SwordItem {
         }
     }
     private void spawnAltRift(BlockPos blockPos, Level level, Player player) {
-        level.addFreshEntity(new RiftEntity(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), player, 200, 2.0F));
+        level.addFreshEntity(new RiftEntity(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), player, 140, 2.0F));
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         this.spawnAltRift(pPlayer.blockPosition(), pLevel, pPlayer);
         if(!pPlayer.getCooldowns().isOnCooldown(this)){
-            pPlayer.getCooldowns().addCooldown(this, 400);
+            pPlayer.getCooldowns().addCooldown(this, 280);
         }
         ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
         itemStack.hurtAndBreak(5, pPlayer, (p_279044_) -> {
             p_279044_.broadcastBreakEvent(pUsedHand);
         });
-        return super.use(pLevel, pPlayer, pUsedHand);
+        return InteractionResultHolder.success(pPlayer.getItemInHand(pUsedHand));
     }
 }
