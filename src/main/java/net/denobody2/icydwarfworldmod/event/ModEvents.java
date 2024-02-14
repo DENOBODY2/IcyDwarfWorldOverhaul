@@ -20,7 +20,6 @@ public class ModEvents {
         e.put(ModEntities.GOOBLINO.get(), Gooblino.createAttributes().build());
         e.put(ModEntities.RIFTLING.get(), Riftling.createAttributes().build());
     }
-
     @SubscribeEvent
     public static void registerSpawnPlacements(SpawnPlacementRegisterEvent event) {
         event.register(ModEntities.GOOBLINO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,

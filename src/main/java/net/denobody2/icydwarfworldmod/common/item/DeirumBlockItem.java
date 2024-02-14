@@ -12,7 +12,6 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.block.Block;
 
 public class DeirumBlockItem extends BlockItem {
-
     public DeirumBlockItem(Block pBlock, Properties pProperties) {
         super(pBlock, pProperties);
     }
