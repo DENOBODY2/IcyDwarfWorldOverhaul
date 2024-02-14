@@ -35,29 +35,31 @@ public class IcyDwarfWorldMod
     //riftling idle, walk, hurt, die, digest
     //crate maybe?
     //rift close, idle, open
+    //if sfx design isnt obnoxious potential for deirum block sounds, verdant stone sounds.
 
-    //update 1 Todo
+    //Todo Full Release (not including sounds)
     //british gooblino
     //-
     //eyeball, eye drop
     //-
     //ash
     //ashen dungeon, ash spider
-    //ash lantern (ash particle)
+    //ash lantern (+ ash particle)
     //ash bricks & ash tiles
-    //ashen bellows (ash gust bellows)
+    //ashen bellows (ash gust bellows, like gust bellows from zelda skyward sword)
     //-
-    //demon - i pay for this, some of it
+    //demon
+    //i pay for the more complex stuff in this
     //summoning altar block
     //burning ash block
-    //demon mob, ash demon armor
-    //demon shard
+    //demon mob (miniboss), demon shard, ash demon armor
+    //lots of particles
     //-
     //pirate
     //fish - maybe easter egg skin coelecanth
     //pirate structure, pirate mob?
     //pirate cosmetics
-    //pirate weapon
+    //pirate weaponry
 
 
 
