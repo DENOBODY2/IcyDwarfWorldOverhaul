@@ -6,7 +6,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 public class ModFoodProperties {
-    public static final FoodProperties MYSTERY_MEAT = new FoodProperties.Builder().nutrition(2).saturationMod(0.5f)
+    public static final FoodProperties MYSTERY_MEAT = new FoodProperties.Builder().nutrition(4).saturationMod(0.5f)
             .effect(() -> new MobEffectInstance(getRandomEffect(), getRandomTime(), getRandomAmplifier()), 1.0f).alwaysEat().build();
 
     private static int getRandomTime() {

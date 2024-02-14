@@ -43,7 +43,7 @@ public class ShadowHammerWeaponItem extends SwordItem {
         }
     }
     private void spawnAltRift(BlockPos blockPos, Level level, Player player) {
-        level.addFreshEntity(new RiftEntity(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), player, 140, 2.0F));
+        level.addFreshEntity(new RiftEntity(level, blockPos.getX(), blockPos.getY()+1, blockPos.getZ(), player, 140, 2.0F));
     }
 
     @Override
