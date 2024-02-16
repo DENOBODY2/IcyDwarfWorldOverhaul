@@ -15,7 +15,7 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<Gooblino>> GOOBLINO =
             ENTITY_TYPES.register("gooblino", () -> EntityType.Builder.of(Gooblino::new, MobCategory.CREATURE)
-                    .sized(1.5F, 1.0F)
+                    .sized(1.374F, 1.0F)
                     .setTrackingRange(16)
                     .updateInterval(1)
                     .build("gooblino"));
