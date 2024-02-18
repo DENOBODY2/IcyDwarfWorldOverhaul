@@ -15,13 +15,13 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<Gooblino>> GOOBLINO =
             ENTITY_TYPES.register("gooblino", () -> EntityType.Builder.of(Gooblino::new, MobCategory.CREATURE)
-                    .sized(1.374F, 1.0F)
+                    .sized(1F, 1.0F)
                     .setTrackingRange(16)
                     .updateInterval(1)
                     .build("gooblino"));
     public static final RegistryObject<EntityType<Riftling>> RIFTLING =
             ENTITY_TYPES.register("riftling", () -> EntityType.Builder.of(Riftling::new, MobCategory.MONSTER)
-                    .sized(1.4F, 1.5F)
+                    .sized(1F, 1.5F)
                     .setTrackingRange(16)
                     .updateInterval(1)
                     .build("riftling"));

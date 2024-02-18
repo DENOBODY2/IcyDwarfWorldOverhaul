@@ -3,6 +3,7 @@ package net.denobody2.icydwarfworldmod;
 import com.mojang.logging.LogUtils;
 import net.denobody2.icydwarfworldmod.registry.*;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -38,8 +39,6 @@ public class IcyDwarfWorldMod
     //if sfx design isnt obnoxious potential for deirum block sounds, verdant stone sounds.
 
     //Todo Full Release (not including sounds)
-    //british gooblino
-    //-
     //eyeball, eye drop
     //-
     //ash
@@ -87,7 +86,12 @@ public class IcyDwarfWorldMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.MANDARIN_FLOWER.get(), 0.4f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.MANDARIN_LEAVES.get(), 0.30f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.FLOWERED_MANDARIN_LEAVES.get(), 0.35f);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.MANDARIN_SAPLING.get(), 0.30f);
+        });
     }
 
 

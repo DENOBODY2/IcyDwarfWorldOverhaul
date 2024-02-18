@@ -175,7 +175,7 @@ public class Gooblino extends TamableAnimal implements GeoEntity {
             boolean flag = this.isOwnedBy(pPlayer) || this.isTame() || itemstack.is(ModItems.MANDARIN_FLOWER.get()) && !this.isTame();
             return flag ? InteractionResult.CONSUME : InteractionResult.PASS;
         } else if (this.isTame()) {
-            if (this.isFood(itemstack) && this.getHealth() < this.getMaxHealth()) {
+            if (this.isFood(itemstack) || itemstack.getItem() == ModItems.MANDARIN_FLOWER.get() && this.getHealth() < this.getMaxHealth()) {
                 this.heal((float)(itemstack.getFoodProperties(this)).getNutrition());
                 if (!pPlayer.getAbilities().instabuild) {
                     itemstack.shrink(1);
