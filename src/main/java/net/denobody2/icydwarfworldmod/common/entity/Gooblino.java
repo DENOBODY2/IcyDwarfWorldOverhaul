@@ -175,13 +175,22 @@ public class Gooblino extends TamableAnimal implements GeoEntity {
             boolean flag = this.isOwnedBy(pPlayer) || this.isTame() || itemstack.is(ModItems.MANDARIN_FLOWER.get()) && !this.isTame();
             return flag ? InteractionResult.CONSUME : InteractionResult.PASS;
         } else if (this.isTame()) {
-            if (this.isFood(itemstack) || itemstack.getItem() == ModItems.MANDARIN_FLOWER.get() && this.getHealth() < this.getMaxHealth()) {
-                this.heal((float)(itemstack.getFoodProperties(this)).getNutrition());
-                if (!pPlayer.getAbilities().instabuild) {
-                    itemstack.shrink(1);
+            if ((this.isFood(itemstack) || itemstack.getItem() == ModItems.MANDARIN_FLOWER.get()) && this.getHealth() < this.getMaxHealth()) {
+                if(itemstack.getItem() == ModItems.MANDARIN_FLOWER.get()){
+                    this.heal((float)(Items.BEEF.getFoodProperties()).getNutrition());
+                    if (!pPlayer.getAbilities().instabuild) {
+                        itemstack.shrink(1);
+                    }
+                    this.gameEvent(GameEvent.EAT, this);
+                    return InteractionResult.SUCCESS;
+                } else {
+                    this.heal((float)(itemstack.getFoodProperties(this)).getNutrition());
+                    if (!pPlayer.getAbilities().instabuild) {
+                        itemstack.shrink(1);
+                    }
+                    this.gameEvent(GameEvent.EAT, this);
+                    return InteractionResult.SUCCESS;
                 }
-                this.gameEvent(GameEvent.EAT, this);
-                return InteractionResult.SUCCESS;
             } else {
                 InteractionResult interactionresult = super.mobInteract(pPlayer, pHand);
                 if ((!interactionresult.consumesAction() || this.isBaby()) && this.isOwnedBy(pPlayer)) {
