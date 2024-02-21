@@ -16,7 +16,7 @@ public class ModSurfaceRules extends SurfaceRules {
         //SurfaceRulesManager.registerOverworldSurfaceRule(SurfaceRules.isBiome(ModBiomes.TEST_BIOME), createTestSurfaceRules());
     }
     public static SurfaceRules.RuleSource createTestSurfaceRules() {
-        SurfaceRules.RuleSource galena = SurfaceRules.state(ModBlocks.MANDARIN_STAIRS.get().defaultBlockState());
+        SurfaceRules.RuleSource galena = SurfaceRules.state(ModBlocks.MANDARIN_PLANKS.get().defaultBlockState());
         SurfaceRules.RuleSource scarlet = SurfaceRules.state(ModBlocks.SHADOW_GEM_BLOCK.get().defaultBlockState());
         SurfaceRules.RuleSource azure = SurfaceRules.state(ModBlocks.VERDANT_STONE.get().defaultBlockState());
         SurfaceRules.RuleSource neutral = SurfaceRules.state(ModBlocks.DEIRUM_BLOCK.get().defaultBlockState());

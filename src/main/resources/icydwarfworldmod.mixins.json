@@ -3,7 +3,7 @@
   "package": "net.denobody2.icydwarfworldmod.mixin",
   "compatibilityLevel": "JAVA_17",
   "target": "@env(DEFAULT)",
-  "refmap": "alexscaves.refmap.json",
+  "refmap": "icydwarfworldmod.refmap.json",
   "mixins": [
 
   ],
