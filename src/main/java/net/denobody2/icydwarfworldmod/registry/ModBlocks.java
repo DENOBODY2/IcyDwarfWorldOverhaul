@@ -272,6 +272,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEIRUM_BLOCK = registerDeirumBlock("deirum_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)
             .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+    public static final RegistryObject<Block> SHADOW_GEM_BLOCK = registerFireResBlock("shadow_gem_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)
+            .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
     public static final RegistryObject<Block> ASHEN_DUST = registerBlock("ashen_dust", () -> new FallingBlock(BlockBehaviour.Properties.copy(Blocks.SAND)
             .sound(SoundType.SAND)
             .requiresCorrectToolForDrops()));
@@ -284,7 +287,7 @@ public class ModBlocks {
             .noOcclusion()
             .sound(SoundType.CHISELED_BOOKSHELF)));
     public static final RegistryObject<Block> CRATE = registerBlock("crate",
-            () -> new CrateBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)));
+            () -> new CrateBlock(BlockBehaviour.Properties.copy(Blocks.BARREL).strength(2.5f)));
 
     private static ButtonBlock woodenButton(BlockSetType pSetType, FeatureFlag... pRequiredFeatures) {
         BlockBehaviour.Properties blockbehaviour$properties = BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY);

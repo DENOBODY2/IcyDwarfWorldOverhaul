@@ -29,7 +29,7 @@ public class IcyDwarfWorldMod
     //.
 
     //Todo Art
-    //.
+    //retextures - just sapling and crate left i think
 
     //Todo Sound
     //gooblino idle, walk, hurt, die
@@ -44,21 +44,27 @@ public class IcyDwarfWorldMod
     //ash
     //ashen dungeon, ash spider
     //ash lantern (+ ash particle)
-    //ash bricks & ash tiles
-    //ashen bellows (ash gust bellows, like gust bellows from zelda skyward sword)
+    //ash bricks & ash tiles & chiseled ash brick
+    //ash bellows (ash gust bellows, like gust bellows from zelda skyward sword)
     //-
     //demon
-    //i pay for the more complex stuff in this
     //summoning altar block
     //burning ash block
-    //demon mob (miniboss), demon shard, ash demon armor
+    //demon mob (miniboss), demon shard, drop use (helmet? weapon? upgrade to ash bellows? not sure)
     //lots of particles
     //-
     //pirate
-    //fish - maybe easter egg skin coelecanth
-    //pirate structure, pirate mob?
+    //fish
+    //fishing trophies and loot
     //pirate cosmetics
     //pirate weaponry
+    //-
+    //biomes
+    //riftling caves
+    //other small biomes with custom things?
+    //-
+    //idk
+    //pirate structure, pirate mob?
 
 
 

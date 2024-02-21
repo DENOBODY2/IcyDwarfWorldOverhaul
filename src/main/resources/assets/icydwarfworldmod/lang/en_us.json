@@ -47,7 +47,7 @@
   "block.icydwarfworldmod.deirum_block": "Block of Deirum",
   "block.icydwarfworldmod.deirum_ore": "Deirum Ore",
   "block.icydwarfworldmod.deepslate_deirum_ore": "Deepslate Deirum Ore",
-  "item.icydwarfworldmod.deirum": "Deirum Slab",
+  "item.icydwarfworldmod.deirum": "Deirum Gem",
   "item.icydwarfworldmod.deirum_sword": "Deirum Sword",
   "item.icydwarfworldmod.deirum_axe": "Deirum Axe",
 
@@ -65,6 +65,7 @@
   "item.icydwarfworldmod.shadow_sword": "Shadow Sword",
   "entity.icydwarfworldmod.shadow_ball_projectile": "Shadow Ball Projectile",
   "entity.icydwarfworldmod.rift": "Shadow Rift",
+  "block.icydwarfworldmod.shadow_gem_block": "Block of Shadow Gem",
 
   "itemGroup.icydwarfworldmod": "IcyDwarf's World Overhaul",
   "entity.icydwarfworldmod.all.command_0": "%s is wandering",
