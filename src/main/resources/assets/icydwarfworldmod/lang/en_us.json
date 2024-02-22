@@ -67,6 +67,8 @@
   "entity.icydwarfworldmod.rift": "Shadow Rift",
   "block.icydwarfworldmod.shadow_gem_block": "Block of Shadow Gem",
 
+  "biome.icydwarfworldmod.riftling_grotto": "Riftling Grotto",
+
   "itemGroup.icydwarfworldmod": "IcyDwarf's World Overhaul",
   "entity.icydwarfworldmod.all.command_0": "%s is wandering",
   "entity.icydwarfworldmod.all.command_1": "%s is staying",

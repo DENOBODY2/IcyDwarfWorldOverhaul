@@ -83,7 +83,7 @@ public class RiftBlobStructurePiece extends AbstractCaveGenerationStructurePiece
             offset.move(dir);
             BlockState state = checkedGetBlock(level, offset);
             if (!state.getFluidState().isEmpty()) {
-                checkedSetBlock(level, offset, Blocks.SANDSTONE.defaultBlockState());
+                checkedSetBlock(level, offset, Blocks.DEEPSLATE.defaultBlockState());
             }
         }
     }
