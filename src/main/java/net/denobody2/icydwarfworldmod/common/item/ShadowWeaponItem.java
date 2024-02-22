@@ -3,6 +3,7 @@ package net.denobody2.icydwarfworldmod.common.item;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import net.denobody2.icydwarfworldmod.common.entity.RiftEntity;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;

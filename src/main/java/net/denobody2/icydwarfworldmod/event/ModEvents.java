@@ -1,18 +1,24 @@
 package net.denobody2.icydwarfworldmod.event;
 
+import com.github.alexthe666.citadel.server.event.EventReplaceBiome;
 import net.denobody2.icydwarfworldmod.ClientProxy;
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.denobody2.icydwarfworldmod.client.renderer.RiftlingRenderer;
 import net.denobody2.icydwarfworldmod.common.entity.Gooblino;
 import net.denobody2.icydwarfworldmod.common.entity.Riftling;
+import net.denobody2.icydwarfworldmod.config.BiomeGenerationConfig;
 import net.denobody2.icydwarfworldmod.registry.ModEntities;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.Holder;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
@@ -33,4 +39,5 @@ public class ModEvents {
         event.register(ModEntities.RIFTLING.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Riftling::checkRiftlingSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
     }
+
 }

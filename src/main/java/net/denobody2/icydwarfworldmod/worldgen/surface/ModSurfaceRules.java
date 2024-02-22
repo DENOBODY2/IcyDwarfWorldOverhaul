@@ -8,21 +8,18 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.Noises;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
-import net.minecraft.world.level.levelgen.placement.CaveSurface;
 
 public class ModSurfaceRules extends SurfaceRules {
 
     public static void setup() {
-        //SurfaceRulesManager.registerOverworldSurfaceRule(SurfaceRules.isBiome(ModBiomes.TEST_BIOME), createTestSurfaceRules());
+        SurfaceRulesManager.registerOverworldSurfaceRule(SurfaceRules.isBiome(ModBiomes.RIFTLING_GROTTO), createTestSurfaceRules());
     }
     public static SurfaceRules.RuleSource createTestSurfaceRules() {
-        SurfaceRules.RuleSource galena = SurfaceRules.state(ModBlocks.MANDARIN_PLANKS.get().defaultBlockState());
+        SurfaceRules.RuleSource mainStone = SurfaceRules.state(Blocks.DEEPSLATE.defaultBlockState());
         SurfaceRules.RuleSource scarlet = SurfaceRules.state(ModBlocks.SHADOW_GEM_BLOCK.get().defaultBlockState());
         SurfaceRules.RuleSource azure = SurfaceRules.state(ModBlocks.VERDANT_STONE.get().defaultBlockState());
-        SurfaceRules.RuleSource neutral = SurfaceRules.state(ModBlocks.DEIRUM_BLOCK.get().defaultBlockState());
-        SurfaceRules.ConditionSource azureCondition = ModSurfaceRuleRegistry.simplexCondition(-0.025F, 0.025F, 90, 1F, 0);
-        SurfaceRules.ConditionSource scarletCondition = ModSurfaceRuleRegistry.simplexCondition(-0.025F, 0.025F, 90, 1F, 1);
-        return SurfaceRules.sequence(bedrock(), SurfaceRules.ifTrue(azureCondition, SurfaceRules.ifTrue(scarletCondition, neutral)), SurfaceRules.ifTrue(scarletCondition, scarlet), SurfaceRules.ifTrue(azureCondition, azure), galena);
+        SurfaceRules.ConditionSource scarletCondition = ModSurfaceRuleRegistry.simplexCondition(-0.070F, 0.070F, 150, 1F, 0);
+        return SurfaceRules.sequence(bedrock(), SurfaceRules.ifTrue(scarletCondition, scarlet), mainStone);
     }
     private static SurfaceRules.RuleSource bedrock() {
         SurfaceRules.RuleSource bedrock = SurfaceRules.state(Blocks.BEDROCK.defaultBlockState());

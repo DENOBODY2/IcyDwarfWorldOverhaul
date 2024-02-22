@@ -13,27 +13,25 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.dimension.LevelStem;
 import net.minecraft.world.phys.Vec3;
 
-import java.util.List;
-
 public class ModBiomes {
-    public static final ResourceKey<Biome> TEST_BIOME = register("test_biome");
+    public static final ResourceKey<Biome> RIFTLING_GROTTO = register("riftling_grotto");
     private static final Vec3 DEFAULT_LIGHT_COLOR = new Vec3(1, 1, 1);
-    private static final Vec3 TEST_BIOME_LIGHT_COLOR = new Vec3(0.5, 0.1, 0.9);
+    private static final Vec3 RIFTLING_GROTTO_LIGHT_COLOR = new Vec3(0.5, 0.1, 0.9);
     public static ResourceKey<Biome> register(String name) {
         return ResourceKey.create(Registries.BIOME, new ResourceLocation(IcyDwarfWorldMod.MOD_ID, name));
     }
     public static void init(){
-        ExpandedBiomes.addExpandedBiome(ModBiomes.TEST_BIOME, LevelStem.OVERWORLD);
+        ExpandedBiomes.addExpandedBiome(ModBiomes.RIFTLING_GROTTO, LevelStem.OVERWORLD);
     }
     public static float getBiomeAmbientLight(Holder<Biome> value) {
-        if (value.is(TEST_BIOME)) {
-            return 0.005F;
+        if (value.is(RIFTLING_GROTTO)) {
+            return 0.007F;
         }
         return 0.0F;
     }
     public static float getBiomeFogNearness(Holder<Biome> value) {
-        if (value.is(TEST_BIOME)) {
-            return -0.45F;
+        if (value.is(RIFTLING_GROTTO)) {
+            return -0.35F;
         }
         return 1.0F;
     }
@@ -46,15 +44,15 @@ public class ModBiomes {
     }
 
     public static float getBiomeSkyOverride(Holder<Biome> value) {
-        if (value.is(TEST_BIOME)) {
+        if (value.is(RIFTLING_GROTTO)) {
             return 1.0F;
         }
         return 0.0F;
     }
 
     public static Vec3 getBiomeLightColorOverride(Holder<Biome> value) {
-        if (value.is(TEST_BIOME)) {
-            return TEST_BIOME_LIGHT_COLOR;
+        if (value.is(RIFTLING_GROTTO)) {
+            return RIFTLING_GROTTO_LIGHT_COLOR;
         }
         return DEFAULT_LIGHT_COLOR;
     }
