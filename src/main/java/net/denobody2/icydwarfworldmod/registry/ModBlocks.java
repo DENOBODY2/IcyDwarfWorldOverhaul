@@ -257,7 +257,17 @@ public class ModBlocks {
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops().noOcclusion()));
 
+    //riftling biome!
+    public static final RegistryObject<Block> SHADOW_SHALE = registerBlock("shadow_shale", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> AMALGASTONE = registerBlock("amalgastone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops()));
+
+
+    //deirum
 
     public static final RegistryObject<Block> DEIRUM_ORE = registerFireResBlock("deirum_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)
             .sound(SoundType.ANCIENT_DEBRIS)

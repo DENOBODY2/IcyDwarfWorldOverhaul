@@ -31,7 +31,7 @@ public class ModBiomeRarity {
             voronoiGenerator.setOffsetAmount(0.2);
         }
         //in blocks
-        double biomeSize = 200 * 0.25D;
+        double biomeSize = 150 * 0.25D;
         double seperationDistance = biomeSize + 700 * 0.25D;
         double sampleX = x / seperationDistance;
         double sampleZ = z / seperationDistance;

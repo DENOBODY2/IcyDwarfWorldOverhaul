@@ -12,13 +12,14 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 public class ModSurfaceRules extends SurfaceRules {
 
     public static void setup() {
-        SurfaceRulesManager.registerOverworldSurfaceRule(SurfaceRules.isBiome(ModBiomes.RIFTLING_GROTTO), createTestSurfaceRules());
+        SurfaceRulesManager.registerOverworldSurfaceRule(SurfaceRules.isBiome(ModBiomes.RIFTLING_GROTTO), createRiftlinGrottoSurfaceRules());
     }
-    public static SurfaceRules.RuleSource createTestSurfaceRules() {
-        SurfaceRules.RuleSource mainStone = SurfaceRules.state(Blocks.DEEPSLATE.defaultBlockState());
-        SurfaceRules.RuleSource secondarystone = SurfaceRules.state(ModBlocks.SHADOW_GEM_BLOCK.get().defaultBlockState());
-        SurfaceRules.ConditionSource scarletCondition = ModSurfaceRuleRegistry.simplexCondition(-0.2F, 0.4F, 70, 6F, 3);
-        return SurfaceRules.sequence(bedrock(), SurfaceRules.ifTrue(scarletCondition, secondarystone), mainStone);
+    public static SurfaceRules.RuleSource createRiftlinGrottoSurfaceRules() {
+        SurfaceRules.RuleSource grass = SurfaceRules.state(Blocks.GRASS_BLOCK.defaultBlockState());
+        SurfaceRules.RuleSource mainStone = SurfaceRules.state(ModBlocks.SHADOW_SHALE.get().defaultBlockState());
+        SurfaceRules.RuleSource secondarystone = SurfaceRules.state(ModBlocks.AMALGASTONE.get().defaultBlockState());
+        SurfaceRules.ConditionSource scarletCondition = ModSurfaceRuleRegistry.simplexCondition(-0.2F, 0.4F, 60, 6F, 3);
+        return SurfaceRules.sequence(bedrock(), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grass), SurfaceRules.ifTrue(scarletCondition, secondarystone), mainStone);
     }
     private static SurfaceRules.RuleSource bedrock() {
         SurfaceRules.RuleSource bedrock = SurfaceRules.state(Blocks.BEDROCK.defaultBlockState());

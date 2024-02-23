@@ -1,5 +1,6 @@
 package net.denobody2.icydwarfworldmod.worldgen.structure.piece;
 
+import net.denobody2.icydwarfworldmod.registry.ModBlocks;
 import net.denobody2.icydwarfworldmod.util.ModMath;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -66,7 +67,7 @@ public class RiftCanyonStructurePiece extends AbstractCaveGenerationStructurePie
             offset.move(dir);
             BlockState state = checkedGetBlock(level, offset);
             if (!state.getFluidState().isEmpty()) {
-                checkedSetBlock(level, offset, Blocks.DEEPSLATE.defaultBlockState());
+                checkedSetBlock(level, offset, ModBlocks.SHADOW_SHALE.get().defaultBlockState());
             }
         }
     }

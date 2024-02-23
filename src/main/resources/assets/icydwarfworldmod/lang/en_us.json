@@ -68,6 +68,8 @@
   "block.icydwarfworldmod.shadow_gem_block": "Block of Shadow Gem",
 
   "biome.icydwarfworldmod.riftling_grotto": "Riftling Grotto",
+  "block.icydwarfworldmod.shadow_shale": "Shadow Shale",
+  "block.icydwarfworldmod.amalgastone": "Amalgastone",
 
   "itemGroup.icydwarfworldmod": "IcyDwarf's World Overhaul",
   "entity.icydwarfworldmod.all.command_0": "%s is wandering",
