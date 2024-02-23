@@ -25,13 +25,13 @@ public class ModBiomes {
     }
     public static float getBiomeAmbientLight(Holder<Biome> value) {
         if (value.is(RIFTLING_GROTTO)) {
-            return 0.007F;
+            return 0.015F;
         }
         return 0.0F;
     }
     public static float getBiomeFogNearness(Holder<Biome> value) {
         if (value.is(RIFTLING_GROTTO)) {
-            return -0.35F;
+            return -0.36F;
         }
         return 1.0F;
     }

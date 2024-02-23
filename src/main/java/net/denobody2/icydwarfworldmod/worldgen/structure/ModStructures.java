@@ -8,5 +8,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModStructures {
     public static final DeferredRegister<StructureType<?>> STRUCTURE_TYPES = DeferredRegister.create(Registries.STRUCTURE_TYPE, IcyDwarfWorldMod.MOD_ID);
-    public static final RegistryObject<StructureType<RiftBlobStructure>> RIFT_BLOB = STRUCTURE_TYPES.register("rift_blob", () -> () -> RiftBlobStructure.CODEC);
+    //public static final RegistryObject<StructureType<RiftBlobStructure>> RIFT_BLOB = STRUCTURE_TYPES.register("rift_blob", () -> () -> RiftBlobStructure.CODEC);
+    public static final RegistryObject<StructureType<RiftCanyonStructure>> RIFT_CANYON = STRUCTURE_TYPES.register("rift_canyon", () -> () -> RiftCanyonStructure.CODEC);
 }

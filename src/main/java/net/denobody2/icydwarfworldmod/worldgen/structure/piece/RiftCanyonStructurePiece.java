@@ -1,11 +1,8 @@
 package net.denobody2.icydwarfworldmod.worldgen.structure.piece;
 
-import net.denobody2.icydwarfworldmod.registry.ModBiomes;
 import net.denobody2.icydwarfworldmod.util.ModMath;
-import net.denobody2.icydwarfworldmod.util.VoronoiGenerator;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
@@ -17,68 +14,52 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceSerializationContext;
+import net.minecraftforge.fml.common.Mod;
 import org.apache.commons.lang3.mutable.MutableBoolean;
 
-public class RiftBlobStructurePiece extends AbstractCaveGenerationStructurePiece{
-    private VoronoiGenerator voronoiGenerator;
-
-    public RiftBlobStructurePiece(BlockPos chunkCorner, BlockPos holeCenter, int bowlHeight, int bowlRadius) {
-        //super(ModStructurePieces.RIFT_BLOB.get(), chunkCorner, holeCenter, bowlHeight, bowlRadius);
+public class RiftCanyonStructurePiece extends AbstractCaveGenerationStructurePiece{
+    public RiftCanyonStructurePiece(BlockPos chunkCorner, BlockPos holeCenter, int bowlHeight, int bowlRadius) {
         super(ModStructurePieces.RIFT_CANYON.get(), chunkCorner, holeCenter, bowlHeight, bowlRadius);
     }
 
-    public RiftBlobStructurePiece(CompoundTag tag) {
-        //super(ModStructurePieces.RIFT_BLOB.get(), tag);
+    public RiftCanyonStructurePiece(CompoundTag tag) {
         super(ModStructurePieces.RIFT_CANYON.get(), tag);
     }
 
-    public RiftBlobStructurePiece(StructurePieceSerializationContext structurePieceSerializationContext, CompoundTag tag) {
+    public RiftCanyonStructurePiece(StructurePieceSerializationContext structurePieceSerializationContext, CompoundTag tag) {
         this(tag);
     }
 
     public void postProcess(WorldGenLevel level, StructureManager featureManager, ChunkGenerator chunkGen, RandomSource random, BoundingBox boundingBox, ChunkPos chunkPos, BlockPos blockPos) {
-        if (voronoiGenerator == null) {
-            voronoiGenerator = new VoronoiGenerator(level.getSeed());
-            voronoiGenerator.setOffsetAmount(0.6F);
-        }
         int cornerX = this.chunkCorner.getX();
         int cornerY = this.chunkCorner.getY();
         int cornerZ = this.chunkCorner.getZ();
-        boolean flag = false;
         BlockPos.MutableBlockPos carve = new BlockPos.MutableBlockPos();
-        BlockPos.MutableBlockPos carveAbove = new BlockPos.MutableBlockPos();
         BlockPos.MutableBlockPos carveBelow = new BlockPos.MutableBlockPos();
         carve.set(cornerX, cornerY, cornerZ);
-        carveAbove.set(cornerX, cornerY, cornerZ);
-        carveBelow.set(cornerX, cornerY, cornerZ);
         for (int x = 0; x < 16; x++) {
             for (int z = 0; z < 16; z++) {
                 MutableBoolean doFloor = new MutableBoolean(false);
                 for (int y = 15; y >= 0; y--) {
                     carve.set(cornerX + x, Mth.clamp(cornerY + y, level.getMinBuildHeight(), level.getMaxBuildHeight()), cornerZ + z);
                     if (inCircle(carve) && !checkedGetBlock(level, carve).is(Blocks.BEDROCK)) {
-                        flag = true;
                         checkedSetBlock(level, carve, Blocks.CAVE_AIR.defaultBlockState());
                         surroundCornerOfLiquid(level, carve);
                         carveBelow.set(carve.getX(), carve.getY() - 1, carve.getZ());
                         doFloor.setTrue();
+                    } else if (doFloor.isTrue()) {
+                        break;
                     }
                 }
-                if (doFloor.isTrue()) {
-                    BlockState floor = checkedGetBlock(level, carveBelow);
-                    if (!floor.isAir()) {
-                        decorateFloor(level, random, carveBelow.immutable());
-                    }
+                if (doFloor.isTrue() && !checkedGetBlock(level, carveBelow).isAir()) {
+                    decorateFloor(level, random, carveBelow);
                     doFloor.setFalse();
                 }
             }
         }
-        if (flag) {
-            replaceBiomes(level, ModBiomes.RIFTLING_GROTTO, 32);
-        }
     }
 
-    private void surroundCornerOfLiquid(WorldGenLevel level, Vec3i center) {
+    private void surroundCornerOfLiquid(WorldGenLevel level, BlockPos.MutableBlockPos center) {
         BlockPos.MutableBlockPos offset = new BlockPos.MutableBlockPos();
         for (Direction dir : Direction.values()) {
             offset.set(center);
@@ -90,20 +71,40 @@ public class RiftBlobStructurePiece extends AbstractCaveGenerationStructurePiece
         }
     }
 
-    private boolean inCircle(BlockPos carve) {
-        float wallNoise = (ModMath.sampleNoise3D(carve.getX(), (int) (carve.getY() * 0.1F), carve.getZ(), 40) + 1.0F) * 0.5F;
-        double yDist = ModMath.smin(1F - Math.abs(this.holeCenter.getY() - carve.getY()) / (float) (height * 0.5F), 1.0F, 0.3F);
+    private boolean inCircle(BlockPos.MutableBlockPos carve) {
+        float pillarNoise = (ModMath.sampleNoise3D(carve.getX(), (int) (carve.getY() * 0.4F), carve.getZ(), 30) + 1.0F) * 0.5F;
+        float verticalNoise = (ModMath.sampleNoise2D(carve.getX(), carve.getZ(), 50) + 1.0F) * 0.2F - (ModMath.smin(ModMath.sampleNoise2D(carve.getX(), carve.getZ(), 20), -0.5F, 0.1F) + 0.5F) * 0.7F;
         double distToCenter = carve.distToLowCornerSqr(this.holeCenter.getX(), carve.getY(), this.holeCenter.getZ());
-        double targetRadius = yDist * (radius * wallNoise) * radius;
-        return distToCenter < targetRadius;
+        float f = getHeightOf(carve);
+        float f1 = (float) Math.pow(canyonStep(f, 11), 2.5F);
+        float rawHeight = Math.abs(this.holeCenter.getY() - carve.getY()) / (float) (height * 0.5F);
+        float reverseRawHeight = 1F - rawHeight;
+        double yDist = ModMath.smin((float) Math.pow(reverseRawHeight, 0.3F), 1.0F, 0.1F);
+        double targetRadius = (yDist * (radius * pillarNoise * f1) * radius);
+        return distToCenter < targetRadius && rawHeight < 1 - verticalNoise;
     }
 
-    private void decorateFloor(WorldGenLevel level, RandomSource rand, BlockPos carveBelow) {
+    private float getHeightOf(BlockPos.MutableBlockPos carve) {
+        int halfHeight = this.height / 2;
+        if (carve.getY() > this.holeCenter.getY() + halfHeight + 1 || carve.getY() < this.holeCenter.getY() - halfHeight) {
+            return 0.0F;
+        } else {
+            return 1F - ((this.holeCenter.getY() + halfHeight - carve.getY()) / (float) (height * 2));
+        }
+    }
+
+    private float canyonStep(float heightScale, int scaleTo) {
+        int clampTo100 = (int) ((heightScale) * scaleTo * scaleTo);
+        return Mth.clamp((float) (Math.round(clampTo100 / (float) scaleTo)) / (float) scaleTo, 0F, 1F);
+    }
+
+    private void decorateFloor(WorldGenLevel level, RandomSource rand, BlockPos.MutableBlockPos carveBelow) {
+        float floorNoise = (ModMath.sampleNoise2D(carveBelow.getX(), carveBelow.getZ(), 50) + 1.0F) * 0.5F;
         BlockState grass = Blocks.GRASS_BLOCK.defaultBlockState();
         BlockState dirt = Blocks.DIRT.defaultBlockState();
         checkedSetBlock(level, carveBelow, grass);
-        for (int i = 0; i < 1 + rand.nextInt(2); i++) {
-            carveBelow = carveBelow.below();
+        for (int i = 0; i < Math.ceil(floorNoise * 1); i++) {
+            carveBelow.move(0, -1, 0);
             checkedSetBlock(level, carveBelow, dirt);
         }
     }

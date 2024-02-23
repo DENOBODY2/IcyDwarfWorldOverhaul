@@ -16,9 +16,9 @@ public class ModSurfaceRules extends SurfaceRules {
     }
     public static SurfaceRules.RuleSource createTestSurfaceRules() {
         SurfaceRules.RuleSource mainStone = SurfaceRules.state(Blocks.DEEPSLATE.defaultBlockState());
-        SurfaceRules.RuleSource scarlet = SurfaceRules.state(ModBlocks.SHADOW_GEM_BLOCK.get().defaultBlockState());
-        SurfaceRules.ConditionSource scarletCondition = ModSurfaceRuleRegistry.simplexCondition(-0.070F, 0.070F, 150, 1F, 0);
-        return SurfaceRules.sequence(bedrock(), SurfaceRules.ifTrue(scarletCondition, scarlet), mainStone);
+        SurfaceRules.RuleSource secondarystone = SurfaceRules.state(ModBlocks.SHADOW_GEM_BLOCK.get().defaultBlockState());
+        SurfaceRules.ConditionSource scarletCondition = ModSurfaceRuleRegistry.simplexCondition(-0.2F, 0.4F, 70, 6F, 3);
+        return SurfaceRules.sequence(bedrock(), SurfaceRules.ifTrue(scarletCondition, secondarystone), mainStone);
     }
     private static SurfaceRules.RuleSource bedrock() {
         SurfaceRules.RuleSource bedrock = SurfaceRules.state(Blocks.BEDROCK.defaultBlockState());

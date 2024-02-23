@@ -1,5 +1,5 @@
 {
-  "type": "icydwarfworldmod:rift_blob",
+  "type": "icydwarfworldmod:rift_canyon",
   "biomes": "icydwarfworldmod:riftling_grotto",
   "step": "raw_generation",
   "start_height": {

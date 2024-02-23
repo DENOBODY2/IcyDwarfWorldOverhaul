@@ -1,14 +1,14 @@
 {
   "structures": [
     {
-      "structure": "icydwarfworldmod:rift_blob",
+      "structure": "icydwarfworldmod:rift_canyon",
       "weight": 1
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "salt": 1,
-    "spacing": 3,
-    "separation": 2
+    "salt": 6,
+    "spacing": 6,
+    "separation": 4
   }
 }
