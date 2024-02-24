@@ -18,7 +18,7 @@ public class ModSurfaceRules extends SurfaceRules {
         SurfaceRules.RuleSource grass = SurfaceRules.state(Blocks.GRASS_BLOCK.defaultBlockState());
         SurfaceRules.RuleSource mainStone = SurfaceRules.state(ModBlocks.SHADOW_SHALE.get().defaultBlockState());
         SurfaceRules.RuleSource secondarystone = SurfaceRules.state(ModBlocks.AMALGASTONE.get().defaultBlockState());
-        SurfaceRules.ConditionSource scarletCondition = ModSurfaceRuleRegistry.simplexCondition(-0.2F, 0.4F, 60, 6F, 3);
+        SurfaceRules.ConditionSource scarletCondition = ModSurfaceRuleRegistry.simplexCondition(-0.2F, 0.4F, 45, 6F, 3);
         return SurfaceRules.sequence(bedrock(), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grass), SurfaceRules.ifTrue(scarletCondition, secondarystone), mainStone);
     }
     private static SurfaceRules.RuleSource bedrock() {
