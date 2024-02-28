@@ -18,6 +18,14 @@
     "icydwarfworldmod:creative_tab_icon",
     "icydwarfworldmod:shadow_gem_block",
     "icydwarfworldmod:shadow_shale",
-    "icydwarfworldmod:amalgastone"
+    "icydwarfworldmod:amalgastone",
+    "icydwarfworldmod:ash_brick_wall",
+    "icydwarfworldmod:ash_tile_wall",
+    "icydwarfworldmod:ash_brick_stairs",
+    "icydwarfworldmod:ash_tile_stairs",
+    "icydwarfworldmod:ash_brick_slab",
+    "icydwarfworldmod:ash_tile_slab",
+    "icydwarfworldmod:ash_bricks",
+    "icydwarfworldmod:ash_tiles"
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "y  ",
+    "yy ",
+    "yyy"
+  ],
+  "key": {
+    "y": {
+      "item": "icydwarfworldmod:ash_bricks"
+    }
+  },
+  "result": {
+    "item": "icydwarfworldmod:ash_brick_stairs",
+    "count": 4
+  }
+}

@@ -42,6 +42,14 @@ public class ModCreativeTabs {
                 pOutput.accept(ModItems.MYSTERY_MEAT.get());
                 pOutput.accept(ModBlocks.ASHEN_DUST.get());
                 pOutput.accept(ModBlocks.ASHEN_DUST_PILE.get());
+                pOutput.accept(ModBlocks.ASH_BRICKS.get());
+                pOutput.accept(ModBlocks.ASH_BRICK_STAIRS.get());
+                pOutput.accept(ModBlocks.ASH_BRICK_SLAB.get());
+                pOutput.accept(ModBlocks.ASH_BRICK_WALL.get());
+                pOutput.accept(ModBlocks.ASH_TILES.get());
+                pOutput.accept(ModBlocks.ASH_TILE_STAIRS.get());
+                pOutput.accept(ModBlocks.ASH_TILE_SLAB.get());
+                pOutput.accept(ModBlocks.ASH_TILE_WALL.get());
                 pOutput.accept(ModBlocks.DEEPSLATE_CHISELED_BOOKSHELF.get());
                 pOutput.accept(ModBlocks.VERDANT_STONE.get());
                 pOutput.accept(ModBlocks.POLISHED_VERDANT_STONE.get());

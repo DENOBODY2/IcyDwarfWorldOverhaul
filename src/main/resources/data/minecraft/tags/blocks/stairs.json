@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "icydwarfworldmod:verdant_cobblestone_stairs",
-    "icydwarfworldmod:verdant_stone_brick_stairs"
+    "icydwarfworldmod:verdant_stone_brick_stairs",
+    "icydwarfworldmod:ash_brick_stairs",
+    "icydwarfworldmod:ash_tile_stairs"
   ]
 }

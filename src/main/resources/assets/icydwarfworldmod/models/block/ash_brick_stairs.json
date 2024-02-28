@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "icydwarfworldmod:block/ash_bricks",
+    "side": "icydwarfworldmod:block/ash_bricks",
+    "top": "icydwarfworldmod:block/ash_bricks"
+  }
+}

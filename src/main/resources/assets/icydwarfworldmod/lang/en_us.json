@@ -8,6 +8,7 @@
   "block.icydwarfworldmod.mandarin_planks": "Mandarin Planks",
   "block.icydwarfworldmod.mandarin_trapdoor": "Mandarin Trapdoor",
   "block.icydwarfworldmod.mandarin_door": "Mandarin Door",
+  "item.icydwarfworldmod.mandarin_door": "Mandarin Door",
   "block.icydwarfworldmod.mandarin_stairs": "Mandarin Stairs",
   "block.icydwarfworldmod.mandarin_slab": "Mandarin Slab",
   "block.icydwarfworldmod.mandarin_button": "Mandarin Button",
@@ -53,6 +54,14 @@
 
   "block.icydwarfworldmod.ashen_dust": "Ashen Dust Block",
   "block.icydwarfworldmod.ashen_dust_pile": "Ashen Dust Pile",
+  "block.icydwarfworldmod.ash_bricks": "Ash Bricks",
+  "block.icydwarfworldmod.ash_brick_stairs": "Ash Brick Stairs",
+  "block.icydwarfworldmod.ash_brick_slab": "Ash Brick Slab",
+  "block.icydwarfworldmod.ash_brick_wall": "Ash Brick Wall",
+  "block.icydwarfworldmod.ash_tiles": "Ash Tiles",
+  "block.icydwarfworldmod.ash_tile_stairs": "Ash Tile Stairs",
+  "block.icydwarfworldmod.ash_tile_slab": "Ash Tile Slab",
+  "block.icydwarfworldmod.ash_tile_wall": "Ash Tile Wall",
 
   "block.icydwarfworldmod.deepslate_chiseled_bookshelf": "Deepslate Chiseled Bookshelf",
   "block.icydwarfworldmod.creative_tab_icon": "Creative Tab Icon",

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "icydwarfworldmod:block/ash_tile_slab"
+    },
+    "type=double": {
+      "model": "icydwarfworldmod:block/ash_tiles"
+    },
+    "type=top": {
+      "model": "icydwarfworldmod:block/ash_tile_slab_top"
+    }
+  }
+}
