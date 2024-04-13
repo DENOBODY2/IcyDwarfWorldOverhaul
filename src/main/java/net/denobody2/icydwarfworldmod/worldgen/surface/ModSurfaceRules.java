@@ -15,11 +15,11 @@ public class ModSurfaceRules extends SurfaceRules {
         SurfaceRulesManager.registerOverworldSurfaceRule(SurfaceRules.isBiome(ModBiomes.RIFTLING_GROTTO), createRiftlinGrottoSurfaceRules());
     }
     public static SurfaceRules.RuleSource createRiftlinGrottoSurfaceRules() {
-        SurfaceRules.RuleSource grass = SurfaceRules.state(Blocks.GRASS_BLOCK.defaultBlockState());
+        SurfaceRules.RuleSource moss = SurfaceRules.state(ModBlocks.MOSSY_SHADOW_SHALE.get().defaultBlockState());
         SurfaceRules.RuleSource mainStone = SurfaceRules.state(ModBlocks.SHADOW_SHALE.get().defaultBlockState());
         SurfaceRules.RuleSource secondarystone = SurfaceRules.state(ModBlocks.AMALGASTONE.get().defaultBlockState());
-        SurfaceRules.ConditionSource scarletCondition = ModSurfaceRuleRegistry.simplexCondition(-0.2F, 0.4F, 45, 6F, 3);
-        return SurfaceRules.sequence(bedrock(), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grass), SurfaceRules.ifTrue(scarletCondition, secondarystone), mainStone);
+        SurfaceRules.ConditionSource stoneCondition = ModSurfaceRuleRegistry.simplexCondition(-0.10F, 0.15F, 15, 4F, 3);
+        return SurfaceRules.sequence(bedrock(), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, moss), SurfaceRules.ifTrue(stoneCondition, secondarystone), mainStone);
     }
     private static SurfaceRules.RuleSource bedrock() {
         SurfaceRules.RuleSource bedrock = SurfaceRules.state(Blocks.BEDROCK.defaultBlockState());

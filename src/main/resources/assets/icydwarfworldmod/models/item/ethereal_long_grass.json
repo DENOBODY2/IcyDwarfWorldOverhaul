@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "icydwarfworldmod:block/ethereal_tall_grass_bottom"
+  }
+}

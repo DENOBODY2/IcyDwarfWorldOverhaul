@@ -3,9 +3,9 @@
   },
   "downfall": 0.4,
   "effects": {
-    "fog_color": 9843431,
-    "foliage_color": 10236642,
-    "grass_color": 10236622,
+    "fog_color": 3211412,
+    "foliage_color": 47551,
+    "grass_color": 38041,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -18,9 +18,9 @@
       "replace_current_music": false,
       "sound": "minecraft:music.overworld.deep_dark"
     },
-    "sky_color": 9843448,
-    "water_color": 12530424,
-    "water_fog_color": 15086328
+    "sky_color": 2359441,
+    "water_color": 45498,
+    "water_fog_color": 47551
   },
   "features": [
     [],
@@ -29,15 +29,14 @@
       "minecraft:monster_room",
       "minecraft:monster_room_deep"
     ],
+    [],
+    [],
     [
-      "minecraft:patch_tall_grass_2",
-      "minecraft:trees_plains",
-      "minecraft:flower_plains",
-      "minecraft:patch_grass_plain",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin"
+      "icydwarfworldmod:shadow_gem_ore_placed"
+    ],
+    [
+      "icydwarfworldmod:ethereal_grass_placed",
+      "icydwarfworldmod:ethereal_grass_bonemeal"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -60,7 +59,7 @@
         "type": "icydwarfworldmod:riftling",
         "maxCount": 3,
         "minCount": 2,
-        "weight": 12
+        "weight": 9
       }
     ],
     "underground_water_creature": [],

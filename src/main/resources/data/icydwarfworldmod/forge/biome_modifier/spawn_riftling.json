@@ -3,8 +3,8 @@
   "biomes": "#minecraft:is_overworld",
   "spawners": {
     "type": "icydwarfworldmod:riftling",
-    "weight": 50,
-    "maxCount": 4,
-    "minCount": 2
+    "weight": 10,
+    "maxCount": 1,
+    "minCount": 1
   }
 }

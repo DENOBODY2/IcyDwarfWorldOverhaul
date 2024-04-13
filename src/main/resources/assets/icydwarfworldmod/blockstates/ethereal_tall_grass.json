@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "icydwarfworldmod:block/ethereal_tall_grass_bottom"
+    },
+    "half=upper": {
+      "model": "icydwarfworldmod:block/ethereal_tall_grass_top"
+    }
+  }
+}

@@ -78,6 +78,13 @@
 
   "biome.icydwarfworldmod.riftling_grotto": "Riftling Grotto",
   "block.icydwarfworldmod.shadow_shale": "Shadow Shale",
+  "block.icydwarfworldmod.mossy_shadow_shale": "Mossy Shadow Shale",
+  "block.icydwarfworldmod.shadow_gem_ore": "Shadow Gem Ore",
+  "block.icydwarfworldmod.ethereal_moss": "Ethereal Moss",
+  "block.icydwarfworldmod.ethereal_grass": "Ethereal Grass",
+  "block.icydwarfworldmod.ethereal_tall_grass": "Ethereal Tall Grass",
+  "block.icydwarfworldmod.ethereal_long_grass": "Ethereal Long Grass",
+  "block.icydwarfworldmod.shadow_lamp": "Shadow Lamp",
   "block.icydwarfworldmod.amalgastone": "Amalgastone",
 
   "itemGroup.icydwarfworldmod": "IcyDwarf's World Overhaul",

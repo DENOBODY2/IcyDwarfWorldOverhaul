@@ -185,11 +185,11 @@ public class Riftling extends PathfinderMob implements GeoEntity {
                 List<ItemStack> items = loottable.getRandomItems((new LootParams.Builder((ServerLevel) this.level())).withParameter(LootContextParams.THIS_ENTITY, this).create(LootContextParamSets.PIGLIN_BARTER));
                 items.forEach(this::spawnAtLocation);
             }
-            if(this.getMainHandItem().getItem() instanceof DeirumBlockItem){
+            /*if(this.getMainHandItem().getItem() instanceof DeirumBlockItem){
                 LootTable loottable = level().getServer().getLootData().getLootTable(CONVERT_LOOT);
                 List<ItemStack> items = loottable.getRandomItems((new LootParams.Builder((ServerLevel) this.level())).withParameter(LootContextParams.THIS_ENTITY, this).create(LootContextParamSets.PIGLIN_BARTER));
                 items.forEach(this::spawnAtLocation);
-            }
+            }*/
         }
         this.setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
     }

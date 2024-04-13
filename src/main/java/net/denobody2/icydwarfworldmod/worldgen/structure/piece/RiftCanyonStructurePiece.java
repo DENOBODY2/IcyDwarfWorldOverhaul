@@ -101,8 +101,8 @@ public class RiftCanyonStructurePiece extends AbstractCaveGenerationStructurePie
 
     private void decorateFloor(WorldGenLevel level, RandomSource rand, BlockPos.MutableBlockPos carveBelow) {
         float floorNoise = (ModMath.sampleNoise2D(carveBelow.getX(), carveBelow.getZ(), 50) + 1.0F) * 0.5F;
-        BlockState grass = Blocks.GRASS_BLOCK.defaultBlockState();
-        BlockState dirt = Blocks.DIRT.defaultBlockState();
+        BlockState grass = ModBlocks.MOSSY_SHADOW_SHALE.get().defaultBlockState();
+        BlockState dirt = ModBlocks.SHADOW_SHALE.get().defaultBlockState();
         checkedSetBlock(level, carveBelow, grass);
         for (int i = 0; i < Math.ceil(floorNoise * 1); i++) {
             carveBelow.move(0, -1, 0);

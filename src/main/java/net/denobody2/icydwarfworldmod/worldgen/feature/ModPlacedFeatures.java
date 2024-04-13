@@ -20,6 +20,10 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> DEEPSLATE_DEIRUM_ORE_PLACED_KEY = registerKey("deepslate_deirum_ore_placed");
+    public static final ResourceKey<PlacedFeature> SHADOW_GEM_ORE_PLACED_KEY = registerKey("shadow_gem_ore_placed");
+    public static final ResourceKey<PlacedFeature> ETHEREAL_GRASS_PLACED = registerKey("ethereal_grass_placed");
+
+    public static final ResourceKey<PlacedFeature> ETHEREAL_GRASS_BONEMEAL = registerKey("ethereal_grass_bonemeal");
     public static final ResourceKey<PlacedFeature> VERDANT_STONE_VEIN_PLACED = registerKey("verdant_stone_vein");
     public static final ResourceKey<PlacedFeature> MANDARIN_TREE_PLACED_KEY = registerKey("mandarin_tree_placed");
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
@@ -30,6 +34,9 @@ public class ModPlacedFeatures {
         register(context, DEEPSLATE_DEIRUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEEPSLATE_DEIRUM_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(10,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(-12))));
+        register(context, SHADOW_GEM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SHADOW_GEM_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(14,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(20))));
 
         register(context, MANDARIN_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MANDARIN_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),

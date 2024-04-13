@@ -68,7 +68,14 @@ public class ModCreativeTabs {
                 pOutput.accept(ModItems.DEIRUM_SWORD.get());
                 pOutput.accept(ModItems.DEIRUM_AXE.get());
                 pOutput.accept(ModBlocks.SHADOW_SHALE.get());
+                pOutput.accept(ModBlocks.SHADOW_GEM_ORE.get());
+                pOutput.accept(ModBlocks.MOSSY_SHADOW_SHALE.get());
                 pOutput.accept(ModBlocks.AMALGASTONE.get());
+                pOutput.accept(ModBlocks.ETHEREAL_MOSS.get());
+                pOutput.accept(ModBlocks.ETHEREAL_GRASS.get());
+                pOutput.accept(ModBlocks.ETHEREAL_TALL_GRASS.get());
+                pOutput.accept(ModBlocks.ETHEREAL_LONG_GRASS.get());
+                pOutput.accept(ModBlocks.SHADOW_LAMP.get());
                 pOutput.accept(ModItems.RIFTLING_SPAWN_EGG.get());
                 pOutput.accept(ModBlocks.SHADOW_GEM_BLOCK.get());
                 pOutput.accept(ModItems.SHADOW_GEM.get());

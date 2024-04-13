@@ -2,6 +2,7 @@ package net.denobody2.icydwarfworldmod.worldgen.feature;
 
 import net.denobody2.icydwarfworldmod.IcyDwarfWorldMod;
 import net.denobody2.icydwarfworldmod.registry.ModBlocks;
+import net.denobody2.icydwarfworldmod.util.ModTags;
 import net.denobody2.icydwarfworldmod.worldgen.feature.config.VeinConfig;
 import net.denobody2.icydwarfworldmod.worldgen.feature.feature.VeinFeature;
 import net.minecraft.core.registries.Registries;
@@ -36,11 +37,15 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_DEIRUM_ORE_KEY = registerKey("deepslate_deirum_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ETHEREAL_GRASS = registerKey("ethereal_grass");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SINGLE_PIECE_OF_ETHEREAL_GRASS = registerKey("single_piece_of_ethereal_grass");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SHADOW_GEM_ORE_KEY = registerKey("shadow_gem_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MANDARIN_TREE_KEY = registerKey("mandarin_tree");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceabeles = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest shadowReplaceabeles = new TagMatchTest(ModTags.Blocks.SHADOW_GEM_ORE_REPLACEABLES);
         RuleTest deepslateReplaceabeles = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
 
@@ -48,9 +53,13 @@ public class ModConfiguredFeatures {
                         Blocks.STONE.defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceabeles, ModBlocks.DEEPSLATE_DEIRUM_ORE.get().defaultBlockState()));
 
+        List<OreConfiguration.TargetBlockState> shadowGemOres = List.of(OreConfiguration.target(shadowReplaceabeles,
+                        ModBlocks.SHADOW_GEM_ORE.get().defaultBlockState()));
+
 
 
         register(context, DEEPSLATE_DEIRUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldDeirumOres, 9, 0.0f));
+        register(context, SHADOW_GEM_ORE_KEY, Feature.ORE, new OreConfiguration(shadowGemOres, 9, 0.0f));
         register(context, MANDARIN_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.MANDARIN_LOG.get()),
                 new ForkingTrunkPlacer(3, 4, 3),

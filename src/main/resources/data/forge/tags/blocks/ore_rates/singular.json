@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "icydwarfworldmod:deepslate_deirum_ore"
+    "icydwarfworldmod:deepslate_deirum_ore",
+    "icydwarfworldmod:shadow_gem_ore"
   ]
 }

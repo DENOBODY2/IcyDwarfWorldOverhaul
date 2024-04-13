@@ -29,6 +29,8 @@ public class ModTags {
         public static final TagKey<Block> GOOBLINO_SPAWNABLE_ON = tag("gooblino_spawnable_on");
         public static final TagKey<Block> RIFTLING_SPAWNABLE_ON = tag("riftling_spawnable_on");
         public static final TagKey<Block> VERDANT_STONE_REPLACES = tag("verdant_stone_replaces");
+
+        public static final TagKey<Block> SHADOW_GEM_ORE_REPLACEABLES = tag("shadow_gem_ore_replaceables");
         public static final TagKey<Block> MANDARIN_LOGS = tag("mandarin_logs");
 
 

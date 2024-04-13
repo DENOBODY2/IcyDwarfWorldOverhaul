@@ -263,6 +263,38 @@ public class ModBlocks {
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops().mapColor(MapColor.COLOR_PURPLE)));
 
+    public static final RegistryObject<Block> MOSSY_SHADOW_SHALE = registerBlock("mossy_shadow_shale", () -> new MossyShaleBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops().mapColor(MapColor.COLOR_PURPLE)));
+
+    public static final RegistryObject<Block> ETHEREAL_MOSS = registerBlock("ethereal_moss", () -> new RiftMossBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+            .sound(SoundType.MOSS)
+            .mapColor(MapColor.COLOR_CYAN)));
+
+    public static final RegistryObject<Block> ETHEREAL_GRASS = registerBlock("ethereal_grass", () -> new EtherealPlantBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)
+            .sound(SoundType.GRASS)
+            .mapColor(MapColor.COLOR_CYAN)));
+
+    public static final RegistryObject<Block> ETHEREAL_TALL_GRASS = registerBlock("ethereal_tall_grass", () -> new BoneMealableDoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)
+            .sound(SoundType.GRASS)
+            .mapColor(MapColor.COLOR_CYAN)));
+
+    public static final RegistryObject<Block> ETHEREAL_LONG_GRASS = registerBlock("ethereal_long_grass", () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)
+            .sound(SoundType.GRASS)
+            .mapColor(MapColor.COLOR_CYAN)));
+
+    public static final RegistryObject<Block> SHADOW_LAMP = registerBlock("shadow_lamp", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN)
+            .sound(SoundType.STONE)
+            .mapColor(MapColor.COLOR_PURPLE).lightLevel((p_152688_) -> {
+                return 15;
+            })));
+
+    public static final RegistryObject<Block> SHADOW_GEM_ORE = registerFireResBlock("shadow_gem_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)
+            .sound(SoundType.ANCIENT_DEBRIS)
+            .strength(15.0F, 900.0F)
+            .requiresCorrectToolForDrops()
+            .sound(SoundType.DEEPSLATE), UniformInt.of(3, 4)));
+
     public static final RegistryObject<Block> AMALGASTONE = registerBlock("amalgastone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
             .sound(SoundType.STONE)
             .requiresCorrectToolForDrops().mapColor(MapColor.COLOR_PURPLE)));

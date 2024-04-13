@@ -25,7 +25,7 @@ public class ModBiomes {
     }
     public static float getBiomeAmbientLight(Holder<Biome> value) {
         if (value.is(RIFTLING_GROTTO)) {
-            return 0.015F;
+            return 0.1F;
         }
         return 0.0F;
     }

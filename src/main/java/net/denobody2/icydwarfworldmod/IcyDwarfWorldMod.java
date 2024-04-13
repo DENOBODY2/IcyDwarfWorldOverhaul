@@ -136,6 +136,7 @@ public class IcyDwarfWorldMod
             ComposterBlock.COMPOSTABLES.put(ModBlocks.FLOWERED_MANDARIN_LEAVES.get().asItem(), 0.4f);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.MANDARIN_SAPLING.get().asItem(), 0.3f);
             ModSurfaceRules.setup();
+
         });
     }
 
