@@ -39,6 +39,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_DEIRUM_ORE_KEY = registerKey("deepslate_deirum_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ETHEREAL_GRASS = registerKey("ethereal_grass");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GLOWER_BULB = registerKey("glower_bulb");
+
     public static final ResourceKey<ConfiguredFeature<?, ?>> SINGLE_PIECE_OF_ETHEREAL_GRASS = registerKey("single_piece_of_ethereal_grass");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SHADOW_GEM_ORE_KEY = registerKey("shadow_gem_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MANDARIN_TREE_KEY = registerKey("mandarin_tree");

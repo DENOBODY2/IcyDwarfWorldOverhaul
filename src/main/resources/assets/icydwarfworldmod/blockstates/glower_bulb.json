@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "icydwarfworldmod:block/glower_bulb_base"
+    },
+    "half=upper": {
+      "model": "icydwarfworldmod:block/glower_bulb_top"
+    }
+  }
+}

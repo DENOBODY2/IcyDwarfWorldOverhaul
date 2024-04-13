@@ -75,6 +75,7 @@ public class ModCreativeTabs {
                 pOutput.accept(ModBlocks.ETHEREAL_GRASS.get());
                 pOutput.accept(ModBlocks.ETHEREAL_TALL_GRASS.get());
                 pOutput.accept(ModBlocks.ETHEREAL_LONG_GRASS.get());
+                pOutput.accept(ModBlocks.GLOWER_BULB.get());
                 pOutput.accept(ModBlocks.SHADOW_LAMP.get());
                 pOutput.accept(ModItems.RIFTLING_SPAWN_EGG.get());
                 pOutput.accept(ModBlocks.SHADOW_GEM_BLOCK.get());

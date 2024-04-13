@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "xzx",
-    "xzx",
+    "aza",
     " y "
   ],
   "key": {
     "x": {
-      "item": "icydwarfworldmod:shadow_gem"
+      "item": "icydwarfworldmod:shadow_gem_block"
     },
     "y": {
       "item": "minecraft:stick"
     },
     "z": {
       "item": "icydwarfworldmod:shadow_ball"
+    },
+    "a": {
+      "item": "minecraft:diamond"
     }
   },
   "result": {

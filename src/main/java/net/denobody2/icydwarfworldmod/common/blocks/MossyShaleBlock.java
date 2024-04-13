@@ -108,7 +108,7 @@ public class MossyShaleBlock extends Block implements BonemealableBlock {
 
             if (blockstate1.isAir()) {
                 Holder<PlacedFeature> holder;
-                if (pRandom.nextInt(8) == 0) {
+                if (pRandom.nextInt(9) == 0) {
                     List<ConfiguredFeature<?, ?>> list = pLevel.getBiome(blockpos1).value().getGenerationSettings().getFlowerFeatures();
                     if (list.isEmpty()) {
                         continue;

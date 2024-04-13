@@ -45,11 +45,11 @@
               "functions": [
                 {
                   "add": false,
-                  "count": 2.0,
+                  "count": 1.0,
                   "function": "minecraft:set_count"
                 }
               ],
-              "name": "icydwarfworldmod:ethereal_grass"
+              "name": "icydwarfworldmod:ethereal_long_grass"
             }
           ]
         }
@@ -100,11 +100,11 @@
               "functions": [
                 {
                   "add": false,
-                  "count": 2.0,
+                  "count": 1.0,
                   "function": "minecraft:set_count"
                 }
               ],
-              "name": "icydwarfworldmod:ethereal_grass"
+              "name": "icydwarfworldmod:ethereal_long_grass"
             }
           ]
         }

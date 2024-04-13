@@ -3,7 +3,7 @@
   "pattern": [
     " x ",
     "zxz",
-    "xyx"
+    "aya"
   ],
   "key": {
     "x": {
@@ -14,6 +14,9 @@
     },
     "z": {
       "item": "icydwarfworldmod:shadow_ball"
+    },
+    "a": {
+      "item": "minecraft:diamond"
     }
   },
   "result": {

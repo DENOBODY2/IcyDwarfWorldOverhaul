@@ -22,6 +22,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> DEEPSLATE_DEIRUM_ORE_PLACED_KEY = registerKey("deepslate_deirum_ore_placed");
     public static final ResourceKey<PlacedFeature> SHADOW_GEM_ORE_PLACED_KEY = registerKey("shadow_gem_ore_placed");
     public static final ResourceKey<PlacedFeature> ETHEREAL_GRASS_PLACED = registerKey("ethereal_grass_placed");
+    public static final ResourceKey<PlacedFeature> GLOWER_BULB_PLACED = registerKey("glower_bulb_placed");
 
     public static final ResourceKey<PlacedFeature> ETHEREAL_GRASS_BONEMEAL = registerKey("ethereal_grass_bonemeal");
     public static final ResourceKey<PlacedFeature> VERDANT_STONE_VEIN_PLACED = registerKey("verdant_stone_vein");

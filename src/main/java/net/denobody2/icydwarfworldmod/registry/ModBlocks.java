@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
@@ -282,6 +283,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> ETHEREAL_LONG_GRASS = registerBlock("ethereal_long_grass", () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)
             .sound(SoundType.GRASS)
             .mapColor(MapColor.COLOR_CYAN)));
+
+    public static final RegistryObject<Block> GLOWER_BULB = registerBlock("glower_bulb", ()-> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+            .sound(SoundType.GRASS)
+            .mapColor(MapColor.COLOR_CYAN)
+            .replaceable().instabreak().offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY).noCollission()
+            .lightLevel(state -> state.getValue(DoublePlantBlock.HALF) == DoubleBlockHalf.UPPER ? 8 : 0)));
 
     public static final RegistryObject<Block> SHADOW_LAMP = registerBlock("shadow_lamp", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN)
             .sound(SoundType.STONE)

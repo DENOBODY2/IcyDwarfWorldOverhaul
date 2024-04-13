@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "icydwarfworldmod:ethereal_tall_grass",
+          "block": "icydwarfworldmod:ethereal_long_grass",
           "condition": "minecraft:block_state_property",
           "properties": {
             "half": "lower"
@@ -17,7 +17,7 @@
           "predicate": {
             "block": {
               "blocks": [
-                "icydwarfworldmod:ethereal_tall_grass"
+                "icydwarfworldmod:glower_bulb"
               ],
               "state": {
                 "half": "upper"
@@ -49,7 +49,7 @@
                   "function": "minecraft:set_count"
                 }
               ],
-              "name": "icydwarfworldmod:ethereal_tall_grass"
+              "name": "icydwarfworldmod:glower_bulb"
             }
           ]
         }
@@ -60,7 +60,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "icydwarfworldmod:ethereal_tall_grass",
+          "block": "icydwarfworldmod:glower_bulb",
           "condition": "minecraft:block_state_property",
           "properties": {
             "half": "upper"
@@ -72,7 +72,7 @@
           "predicate": {
             "block": {
               "blocks": [
-                "icydwarfworldmod:ethereal_tall_grass"
+                "icydwarfworldmod:glower_bulb"
               ],
               "state": {
                 "half": "lower"
@@ -104,7 +104,7 @@
                   "function": "minecraft:set_count"
                 }
               ],
-              "name": "icydwarfworldmod:ethereal_tall_grass"
+              "name": "icydwarfworldmod:glower_bulb"
             }
           ]
         }
@@ -112,5 +112,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "icydwarfworldmod:blocks/ethereal_tall_grass"
+  "random_sequence": "icydwarfworldmod:blocks/glower_bulb"
 }

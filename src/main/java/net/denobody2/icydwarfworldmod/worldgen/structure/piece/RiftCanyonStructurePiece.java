@@ -15,7 +15,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceSerializationContext;
-import net.minecraftforge.fml.common.Mod;
 import org.apache.commons.lang3.mutable.MutableBoolean;
 
 public class RiftCanyonStructurePiece extends AbstractCaveGenerationStructurePiece{
@@ -73,15 +72,19 @@ public class RiftCanyonStructurePiece extends AbstractCaveGenerationStructurePie
     }
 
     private boolean inCircle(BlockPos.MutableBlockPos carve) {
+        float df1 = (ModMath.sampleNoise3D(carve.getX(), carve.getY(), carve.getZ(), 30) + 0.5F) * 0.6F;
+        float df2 = ModMath.sampleNoise3D(carve.getX() - 1300, carve.getY() + 70, carve.getZ() + 80, 20) * 0.17F;
+        double df1Smooth = ModMath.smin(df1 + df2, 1.0F, 0.1F);
         float pillarNoise = (ModMath.sampleNoise3D(carve.getX(), (int) (carve.getY() * 0.4F), carve.getZ(), 30) + 1.0F) * 0.5F;
-        float verticalNoise = (ModMath.sampleNoise2D(carve.getX(), carve.getZ(), 50) + 1.0F) * 0.2F - (ModMath.smin(ModMath.sampleNoise2D(carve.getX(), carve.getZ(), 20), -0.5F, 0.1F) + 0.5F) * 0.7F;
+        float verticalNoise = (ModMath.sampleNoise2D(carve.getX(), carve.getZ(), 30) + 0.7F) * 0.2F - (ModMath.smin(ModMath.sampleNoise2D(carve.getX(), carve.getZ(), 20), -0.5F, 0.1F) + 0.5F) * 0.7F;
         double distToCenter = carve.distToLowCornerSqr(this.holeCenter.getX(), carve.getY(), this.holeCenter.getZ());
         float f = getHeightOf(carve);
-        float f1 = (float) Math.pow(canyonStep(f, 11), 2.5F);
-        float rawHeight = Math.abs(this.holeCenter.getY() - carve.getY()) / (float) (height * 0.5F);
+        float f1 = (float) Math.pow(firstStep(f, 11), 2.5F);
+        float f2 = (float) Math.pow(secondStep(f, 8), 3F);
+        float rawHeight = Math.abs(this.holeCenter.getY() - carve.getY()) / (float) (height * 0.6F);
         float reverseRawHeight = 1F - rawHeight;
         double yDist = ModMath.smin((float) Math.pow(reverseRawHeight, 0.3F), 1.0F, 0.1F);
-        double targetRadius = (yDist * (radius * pillarNoise * f1) * radius);
+        double targetRadius = (yDist * (radius * (df1Smooth/pillarNoise) * ((f1-f2)) * radius));
         return distToCenter < targetRadius && rawHeight < 1 - verticalNoise;
     }
 
@@ -94,9 +97,13 @@ public class RiftCanyonStructurePiece extends AbstractCaveGenerationStructurePie
         }
     }
 
-    private float canyonStep(float heightScale, int scaleTo) {
+    private float firstStep(float heightScale, int scaleTo) {
         int clampTo100 = (int) ((heightScale) * scaleTo * scaleTo);
         return Mth.clamp((float) (Math.round(clampTo100 / (float) scaleTo)) / (float) scaleTo, 0F, 1F);
+    }
+    private float secondStep(float heightScale, int scaleTo) {
+        int clampTo50 = (int) ((heightScale) * scaleTo * scaleTo * 0.6) / 2;
+        return Mth.clamp((float) (Math.round(clampTo50 / (float) scaleTo)) / (float) scaleTo / 1.5F, 0F, 1F);
     }
 
     private void decorateFloor(WorldGenLevel level, RandomSource rand, BlockPos.MutableBlockPos carveBelow) {
