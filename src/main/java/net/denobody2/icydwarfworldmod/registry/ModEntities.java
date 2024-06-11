@@ -38,7 +38,7 @@ public class ModEntities {
             .sized(1.0F, 1.0F)
             .fireImmune()
             .clientTrackingRange(10).
-            updateInterval(Integer.MAX_VALUE)
+            updateInterval(20)
             .build("rift"));
     public static final RegistryObject<EntityType<ModBoatEntity>> MOD_BOAT =
             ENTITY_TYPES.register("mod_boat", () -> EntityType.Builder.<ModBoatEntity>of(ModBoatEntity::new, MobCategory.MISC)

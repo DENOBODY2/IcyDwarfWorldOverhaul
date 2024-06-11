@@ -21,4 +21,5 @@ public class ModRenderTypes extends RenderType {
                 .setOverlayState(OVERLAY)
                 .createCompositeState(false));
     }
+
 }
